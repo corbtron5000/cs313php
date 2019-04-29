@@ -1,0 +1,20 @@
+#div1 {
+	background-color: lightgray;
+	text-align: left;
+	font-size: 24;
+}
+
+#div2 {
+	background-color: lightgray;
+	text-align: center;
+	font-size: 24;
+}
+#div3 {
+	background-color: lightgray;
+	text-align: right;
+	font-size: 24;
+}
+
+div:hover {
+	font-weight: bold;
+}
