@@ -1,0 +1,66 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #000058;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+    
+   display: block;
+   padding: 16px 16px;
+   color: white;
+   font-size: 20px;
+   text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1:hover {
+
+}
+
+a:hover {
+    background-color: #6a6a6a;
+}
+
+p {
+    width: 900px;
+    font-size: 18px;
+}
+
+#about {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+#hobby {
+    display: inline-block;
+    vertical-align: top;
+}
+
+h2 {
+    padding-left: 5px;
+    background-color: lightgray;
+
+}
+
+#spider {
+    padding-top: 20px;
+}
+
+
+

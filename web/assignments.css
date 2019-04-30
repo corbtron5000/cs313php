@@ -1,0 +1,53 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #000058;
+
+}
+
+li.assign {
+  float: left;
+}
+
+li.assign a {
+    
+   display: block;
+   padding: 16px 16px;
+   color: white;
+   font-size: 20px;
+   text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav:hover {
+    background-color: #6a6a6a;
+}
+
+#list {
+  text-align: center;
+}
+
+li.list {
+  list-style-type: none;
+  padding: 5px
+}
+
+a {
+  padding: 15px;
+}
+
+div {
+  text-align: center;
+  display: block;
+  padding-bottom: 20px;
+
+}
