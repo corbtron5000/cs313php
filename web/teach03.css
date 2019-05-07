@@ -1,0 +1,23 @@
+* { margin: 0; box-sizing: border-box; }
+
+input {
+    margin: 0 0 10px 50px;
+}
+
+p {
+    font-size: 1.25em;
+    margin: 10px 50px 0;
+    color: darkblue;
+    font-weight: 700;
+}
+
+textarea {
+    margin: 0 0 10px 50px;
+    height: 100px;
+    width: 300px;
+}
+
+button {
+    color: blue;
+    font-size: 1.5em;
+}
