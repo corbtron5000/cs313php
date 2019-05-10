@@ -45,8 +45,8 @@
 				<div class="div2">
 					<h3>2 x 2 Rubik's Cube</h3>
 					<p>Price: $7.00</p>
-					<select name="cube2">
-						<option value="1">1</option>
+					<select name="cube2" id="cube2">
+						<option value="1" >1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>
@@ -61,8 +61,10 @@
 					<?php
 						if (isset($_POST['Add2x2']))
 						{
-							$_SESSION["count2"] += 1;
-							$_SESSION["cart"] += 1;
+							$amount = $_POST['cube2'];
+							$intAmount = (int)$count;
+							$_SESSION["count2"] += $intAmount;
+							$_SESSION["cart"] += $intAmount;
 						}
 					?>
 				</div>
