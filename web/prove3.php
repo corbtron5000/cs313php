@@ -62,7 +62,7 @@
 						if (isset($_POST['Add2x2']))
 						{
 							$amount = $_POST['cube2'];
-							$intAmount = (int)$count;
+							$intAmount = (int)$amount;
 							$_SESSION["count2"] += $intAmount;
 							$_SESSION["cart"] += $intAmount;
 						}
