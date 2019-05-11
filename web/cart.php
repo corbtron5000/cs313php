@@ -82,8 +82,8 @@
 					echo "<h3> 3 x 3 Rubik's Cube </h3>";
 					echo "<label> Quantity: $q3 </table?";
 					echo "<label> price: $ $price3.00 </label>";
-					echo "<br>";
-					echo "<input type='submit' name='remove3' value='remove one'>";
+					echo "<br><br>";
+					echo "<input type='submit' name='remove3' value='remove one'><br><br>";
 					echo "<a href= 'prove3.php'> Continue shopping </a>";
 					echo "</div>";
 					echo "</div>";
@@ -115,8 +115,8 @@
 					echo "<h3> 4 x 4 Rubik's Cube </h3>";
 					echo "<label> Quantity: $q4 </table?";
 					echo "<label> price: $ $price4.00 </label>";
-					echo "<br>";
-					echo "<input type='submit' name='remove4' value='remove one'>";
+					echo "<br><br>";
+					echo "<input type='submit' name='remove4' value='remove one'><br><br>";
 					echo "<a href= 'prove3.php'> Continue shopping </a>";
 					echo "</div>";
 					echo "</div>";
@@ -148,8 +148,8 @@
 					echo "<h3> 5 x 5 Rubik's Cube </h3>";
 					echo "<label> Quantity: $q5 </table?";
 					echo "<label> price: $ $price5.00 </label>";
-					echo "<br>";
-					echo "<input type='submit' name='remove5' value='remove one'>";
+					echo "<br><br>";
+					echo "<input type='submit' name='remove5' value='remove one'><br><br>";
 					echo "<a href= 'prove3.php'> Continue shopping </a>";
 					echo "</div>";
 					echo "</div>";
@@ -181,8 +181,8 @@
 					echo "<h3> 6 x 6 Rubik's Cube </h3>";
 					echo "<label> Quantity: $q6 </table?";
 					echo "<label> price: $ $price6.00 </label>";
-					echo "<br>";
-					echo "<input type='submit' name='remove6' value='remove one'>";
+					echo "<br><br>";
+					echo "<input type='submit' name='remove6' value='remove one'><br><br>";
 					echo "<a href= 'prove3.php'> Continue shopping </a>";
 					echo "</div>";
 					echo "</div>";
@@ -214,8 +214,8 @@
 					echo "<h3> 7 x 7 Rubik's Cube </h3>";
 					echo "<label> Quantity: $q7 </table?";
 					echo "<label> price: $ $price7.00 </label>";
-					echo "<br>";
-					echo "<input type='submit' name='remove7' value='remove one'>";
+					echo "<br><br>";
+					echo "<input type='submit' name='remove7' value='remove one'><br><br>";
 					echo "<a href= 'prove3.php'> Continue shopping </a>";
 					echo "</div>";
 					echo "</div>";
