@@ -229,7 +229,7 @@
 
 			$_SESSION['total'] = $price2 + $price3 + $price4 + $price5 + $price6 + $price7;
 		?>
-		<?php $total = $_SESSION['total']; echo "<p id="total">Total: $ $total.00</p>"; ?>
+		<?php $total = $_SESSION['total']; echo "<p id='total'>Total: $ $total.00</p>"; ?>
 		<a href="checkout.php"> Continue to checkout</a>
 	</form>
 </main>
