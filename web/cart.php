@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="cart.css">
+	<link rel="stylesheet" type="text/css" href="cart1.css">
 	<title>Shopping Cart</title>
 </head>
 <body>

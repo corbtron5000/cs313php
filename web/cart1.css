@@ -1,0 +1,49 @@
+ul {
+	background-color: #719CAA;
+	list-style-type: none;
+	overflow: hidden;
+	margin-bottom: -20px;
+	margin-left: -40px;
+}
+
+header {
+	background-color: #C1ECFA;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+li a {
+    
+   display: block;
+   padding: 16px 16px;
+   color: white;
+   font-size: 20px;
+   text-decoration: none;
+}
+
+
+li {
+	float: left;
+}
+
+a:hover {
+	background-color: grey;
+}
+
+#title {
+  padding-left: 20px;
+}
+
+div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#total {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
