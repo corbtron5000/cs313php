@@ -88,8 +88,10 @@
 					<input type="submit" name="Add3x3" value="Add to cart">
 					<?php
 						if (isset($_POST["Add3x3"])) {
-						$_SESSION["count3"] += 1;
-						$_SESSION["cart"] += 1;
+							$amount1 = $_POST['cube3'];
+							$intAmount1 = (int)$amount1;
+							$_SESSION["count3"] += $intAmount1;
+							$_SESSION["cart"] += $intAmount1;
 					}
 					?>
 				</div>
