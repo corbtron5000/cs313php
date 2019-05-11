@@ -44,4 +44,6 @@ div {
 
 #total {
   text-align: right;
+  font-weight: bold;
+  font-size: 20px;
 }
