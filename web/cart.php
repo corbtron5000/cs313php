@@ -48,8 +48,8 @@
 					echo "<h3> 2 x 2 Rubik's Cube </h3>";
 					echo "<label> Quantity: $q2 </table?";
 					echo "<label> price: $ $price2.00 </label>";
-					echo "<br>";
-					echo "<input type='submit' name='remove2' value='remove one'><br>";
+					echo "<br><br>";
+					echo "<input type='submit' name='remove2' value='remove one'><br><br>";
 					echo "<a href= 'prove3.php'> Continue shopping </a>";
 					echo "</div>";
 					echo "</div>";
