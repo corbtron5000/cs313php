@@ -87,11 +87,9 @@
 					</select>
 					<input type="submit" name="Add3x3" value="Add to cart">
 					<?php
-						if (isset($_POST["Add3x3"])$) {
-							$amount1 = $_POST['cube3'];
-							//$intAmount = (int)$amount;
-							//$_SESSION["count3"] += $intAmount;
-							//$_SESSION["cart"] += $intAmount;
+						if (isset($_POST["Add3x3"])) {
+						$_SESSION["count3"] += 1;
+						$_SESSION["cart"] += 1;
 					}
 					?>
 				</div>
@@ -116,10 +114,8 @@
 					<input type="submit" name="Add4x4" value="Add to cart">
 					<?php
 						if (isset($_POST["Add4x4"])) {
-							$amount2 = $_POST['cube4'];
-							//$intAmount = (int)$amount;
-							//$_SESSION["count4"] += $intAmount;
-							//$_SESSION["cart"] += $intAmount;
+						$_SESSION["count4"] += 1;
+						$_SESSION["cart"] += 1;
 					}
 					?>
 				</div>
@@ -143,10 +139,8 @@
 					<input type="submit" name="Add5x5" value="Add to cart">
 					<?php
 						if (isset($_POST["Add5x5"])) {
-							$amount3 = $_POST['cube5'];
-							//$intAmount = (int)$amount;
-							//$_SESSION["count5"] += $intAmount;
-							//$_SESSION["cart"] += $intAmount;
+						$_SESSION["count5"] += 1;
+						$_SESSION["cart"] += 1;
 					}
 					?>
 				</div>
@@ -171,10 +165,8 @@
 					<input type="submit" name="Add6x6" value="Add to cart">
 					<?php
 						if (isset($_POST["Add6x6"])) {
-							$amount4 = $_POST['cube6'];
-							//$intAmount = (int)$amount;
-							//$_SESSION["count6"] += $intAmount;
-							//$_SESSION["cart"] += $intAmount;
+						$_SESSION["count6"] += 1;
+						$_SESSION["cart"] += 1;
 					}
 					?>
 				</div>
@@ -198,10 +190,8 @@
 					<input type="submit" name="Add7x7" value="Add to cart">
 					<?php
 						if (isset($_POST["Add7x7"])) {
-							$amount5 = $_POST['cube7'];
-							//$intAmount = (int)$amount;
-							//$_SESSION["count7"] += $intAmount;
-							//$_SESSION["cart"] += $intAmount;
+						$_SESSION["count7"] += 1;
+						$_SESSION["cart"] += 1;
 					}
 					?>
 				</div>
