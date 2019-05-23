@@ -24,10 +24,10 @@
 
 		<?php 
 
-			$statement = $db->prepare("SELECT name, serving_size FROM meals"));
+			$statement = $db->prepare("SELECT name, serving_size FROM meals");
 			$statement->execute();
 
-		while ($row = $statement->fetch(PDO::FETCH_ASSOC) {
+		while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 				$name = $row['name'];
 				$serving = $row['serving_size'];
