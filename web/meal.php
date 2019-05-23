@@ -32,7 +32,7 @@
 				$name = $row['name'];
 				$serving = $row['serving_size'];
 
-				echo "<h1> $name and $serving";
+				echo "<h1> $name and $serving</h1>";
 			}
 		?>
 	</main>
