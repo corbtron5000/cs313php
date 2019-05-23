@@ -13,9 +13,9 @@
 	<header>
 		<h1 id="title">Meal Shopper</h1>
 		<ul>
-			<li><a href="homeMeal.php" class="link"></a>Home</li>
-			<li><a href="meal.php" class="link"></a>Add Meal</li>
-			<li><a href="groceries" class="link"></a>Groceries List</li>
+			<li><a href="homeMeal.php" class="link">Home</a></li>
+			<li><a href="meal.php" class="link">Add Meal</a></li>
+			<li><a href="groceries" class="link">Grocery List</a></li>
 		</ul>
 	</header>
 
