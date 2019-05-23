@@ -18,6 +18,11 @@
 			<li><a href="groceries.php" class="link">Grocery List</a></li>
 		</ul>
 	</header>
+	<main>
+		<br><br><br><br><br><br><br>
+		<h1>Your Groceries List</h1>
+		
+	</main>
 
 </body>
 </html>
