@@ -24,15 +24,22 @@
 
 		<?php 
 
-			$statement = $db->prepare("SELECT name, serving_size FROM meals");
+			$statement = $db->prepare("SELECT meals_id, name, serving_size, description FROM meals");
 			$statement->execute();
 
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 				$name = $row['name'];
 				$serving = $row['serving_size'];
+				$id = $row['meals_id'];
+				$desc = $row['description'];
 
-				echo "<h1> Name: $name and Serving size: $serving</h1>";
+				echo "<div id=div>";
+				echo "<h3 id=name>$name</h3>";
+				echo '<h5 id="description">Description</h5>';
+				echo "<p id=desc>$desc</p>";
+				echo "<label id=size>$serving</label>";
+				echo "</div>"
 			}
 		?>
 	</main>
