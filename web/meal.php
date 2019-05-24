@@ -29,7 +29,6 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Add a Meal</h1>
-		<form>
 
 			<label>Meal Name</label><br>
 			<input type="text" name="name" placeholder="Enter a Meal Name">
@@ -44,8 +43,8 @@
 			<input type="text" name="size" placeholder="Enter a integer">
 
 			<div>
+				<label>Ingredients</label><br>
 				<div class="ingredDiv">
-					<label>Ingredients</label><br>
 					<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name">
 					<input type="text" id="quantity" name="quantity[]" placeholder="Enter decimal number amount: 1.5">
 					<input type="text" id="measure" name="measure[]" placeholder ="Enter measurement: Cup">
@@ -53,7 +52,6 @@
 			</div>
 			<button id="add">Add New Ingredient</button>
 
-		</form>
 
 
 	</main>
