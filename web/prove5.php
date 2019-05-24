@@ -27,7 +27,7 @@
 			$statement = $db->prepare("SELECT meals_id, name, serving_size, description FROM meals");
 			$statement->execute();
 
-			echo "<div id=parent>"
+			echo "<div id=parent>";
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 				$name = $row['name'];
@@ -42,7 +42,7 @@
 				echo "<label id=size>Serving Size: $serving</label>";
 				echo "</div>";
 			}
-			echo "</div>"
+			echo "</div>";
 		?>
 	</main>
 
