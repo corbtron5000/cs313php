@@ -12,7 +12,7 @@
 	<script>
 		$(document).ready(function() {
 			$('#add').click(function() {
-				$('div.ingredDiv:first').clone().insertAfter(this).find('input').val('')
+				$('div.ingredDiv:first').clone().insertBefore(this).find('input').val('')
 			});
 		});
 	</script>
@@ -48,7 +48,7 @@
 					<label>Ingredients</label><br>
 					<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name">
 					<input type="text" id="quantity" name="quantity[]" placeholder="Enter decimal number amount: 1.5">
-					<input type="text" id="measure" name="measure[]" pattern="Enter measurement: Cup">
+					<input type="text" id="measure" name="measure[]" placeholder ="Enter measurement: Cup">
 				</div>
 			</div>
 			<button id="add">Add New Ingredient</button>
