@@ -27,7 +27,8 @@
 			$statement = $db->prepare("SELECT meals_id, name, serving_size, description FROM meals");
 			$statement->execute();
 
-		while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+			echo "<div id=parent>"
+			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 				$name = $row['name'];
 				$serving = $row['serving_size'];
@@ -35,12 +36,13 @@
 				$desc = $row['description'];
 
 				echo "<div id=div>";
-				echo "<h3 id=name>$name</h3>";
-				echo "<h5 id=description>Description</h5>";
+				echo "<h2 id=name>$name</h2>";
+				echo "<h3 id=description>Description</h3>";
 				echo "<p id=desc>$desc</p>";
-				echo "<label id=size>$serving</label>";
+				echo "<label id=size>Serving Size: $serving</label>";
 				echo "</div>";
 			}
+			echo "</div>"
 		?>
 	</main>
 

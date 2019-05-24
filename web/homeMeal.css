@@ -36,3 +36,22 @@ a:hover {
 #title {
   text-align: center;
 }
+
+#div {
+  background-color: #F0F0F0;
+  width: 250;
+  height: 250;
+  display: inline-block;
+}
+
+#size {
+  text-align: right;
+}
+
+#name {
+  text-align: left;
+}
+
+#description {
+  text-align: center;
+}
