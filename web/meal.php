@@ -10,9 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="homeMeal.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script>
-		$(function() {
+		$(document).ready(function() {
 			$('#add').click(function() {
-				$('dv.ingredDiv:first').clone().insertAfter(this).find('input').val('')
+				$('div.ingredDiv:first').clone().insertAfter(this).find('input').val('')
 			});
 		});
 	</script>
