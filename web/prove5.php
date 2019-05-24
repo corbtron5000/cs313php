@@ -36,10 +36,10 @@
 
 				echo "<div id=div>";
 				echo "<h3 id=name>$name</h3>";
-				echo '<h5 id="description">Description</h5>';
+				echo "<h5 id=description>Description</h5>";
 				echo "<p id=desc>$desc</p>";
 				echo "<label id=size>$serving</label>";
-				echo "</div>"
+				echo "</div>";
 			}
 		?>
 	</main>
