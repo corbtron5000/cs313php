@@ -25,7 +25,7 @@
 		<table>
 			<tr>
 				<th>Total</th>
-				<th>Hame</th>
+				<th>Name</th>
 			</tr>
 		
 		<?php
@@ -40,7 +40,7 @@
 				echo "<tr>";
 				echo "<td>$total</td>";
 				echo "<td>$name</td>";
-				echo "<td><botton>remove</botton></td>";
+				echo "<td><button>Remove</button></td>";
 				echo "</tr>";
 			}
 		?>
