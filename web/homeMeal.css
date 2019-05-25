@@ -29,7 +29,7 @@ li {
 	float: left;
 }
 
-a:hover {
+a.link:hover {
 	background-color: #383838;
 }
 
@@ -57,7 +57,7 @@ a:hover {
   text-align: center;
 }
 
-div#div: hover {
+a.meals:hover {
   background-color: #F0F0F0;
 
 }
