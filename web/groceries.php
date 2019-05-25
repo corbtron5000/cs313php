@@ -27,13 +27,13 @@
 			$statement->execute(); 
 
 
-			echo "<h3> Total<pre>					<pre>Name</h3>";
+			echo "<h3> Total<pre>	<pre>Name</h3>";
 			while ( $row = $statement->fetch(PDO::FETCH_ASSOC)) {
 				
 				$total = $row['total'];
 				$name = $row['name'];
 
-				echo "<p> $total<pre>					</pre>$name</p>";
+				echo "<p> $total<pre>	</pre>$name</p>";
 			}
 		?>
 	</main>
