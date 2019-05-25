@@ -22,6 +22,7 @@
 		<br><br><br><br><br><br><br>
 		<h1>Your Groceries List</h1>
 
+		<div id="table">
 		<table>
 			<tr>
 				<th>Total</th>
@@ -45,6 +46,7 @@
 			}
 		?>
 		</table>
+	</div>
 	</main>
 
 </body>
