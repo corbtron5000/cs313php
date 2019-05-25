@@ -30,30 +30,32 @@
 		<br><br><br><br><br><br><br>
 		<h1>Add a Meal</h1>
 
-		<label>Meal Name</label><br>
-		<input type="text" name="name" placeholder="Enter a Meal Name"><br>
+		<div id="from">
+			<label>Meal Name</label><br>
+			<input type="text" name="name" placeholder="Enter a Meal Name"><br>
 
-		<label>Description</label><br>
-		<textarea name="description" placeholder="Enter a description"></textarea><br>
+			<label>Description</label><br>
+			<textarea name="description" placeholder="Enter a description" rows="5" cols="100"></textarea><br>
 
-		<label>Directions</label><br>
-		<textarea name="Directions" placeholder="Enter the directions"></textarea>
+			<label>Directions</label><br>
+			<textarea name="Directions" placeholder="Enter the directions" rows="5" cols="100"></textarea><br>
 
-		<label>Serving Size</label><br>
-		<input type="text" name="size" placeholder="Enter a integer">
+			<label>Serving Size</label><br>
+			<input type="text" name="size" placeholder="Enter a integer">
 
-		<div>
-			<label>Ingredients</label><br>
-			<div class="div">
-				<label>Enter Ingredient </label>
-				<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name"><br>
-				<label>Enter Quantity measurementa as Number </label>
-				<input type="text" id="quantity" name="quantity[]" placeholder="1.5"><br>
-				<label>Enter Measurement Type </label>
-				<input type="text" id="measure" name="measure[]" placeholder ="Cup">
+			<div>
+				<label>Ingredients</label><br>
+				<div class="div">
+					<label>Enter Ingredient </label>
+					<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name"><br>
+					<label>Enter Quantity measurementa as Number </label>
+					<input type="text" id="quantity" name="quantity[]" placeholder="1.5"><br>
+					<label>Enter Measurement Type </label>
+					<input type="text" id="measure" name="measure[]" placeholder ="Cup">
 			</div>
-			<br><button id="add">Add New Ingredient</button>
-			<button id="create">Create Meal</button>
+				<br><button id="add">Add New Ingredient</button>
+				<button id="create">Create Meal</button>
+			</div>
 		</div>
 
 

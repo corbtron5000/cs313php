@@ -47,3 +47,7 @@ body {
   width: 250;
   height: 251;
 }
+
+#form {
+  align-content: center;
+}
