@@ -12,7 +12,7 @@
 	<script>
 		$(document).ready(function() {
 			$('#add').click(function() {
-				$('div.ingredDiv:first').clone().insertBefore(this).find('input').val('')
+				$('div.div:first').clone().insertBefore(this).find('input').val('')
 			});
 		});
 	</script>
