@@ -45,12 +45,16 @@
 			<div>
 				<label>Ingredients</label><br>
 				<div class="ingredDiv">
+					<label>Enter Ingredient</label><br>
 					<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name">
-					<input type="text" id="quantity" name="quantity[]" placeholder="Enter decimal number amount: 1.5">
-					<input type="text" id="measure" name="measure[]" placeholder ="Enter measurement: Cup">
+					<label>Enter Quantity measurementa as Number</label><br>
+					<input type="text" id="quantity" name="quantity[]" placeholder="1.5">
+					<label>Enter Measurement Type:</label>
+					<input type="text" id="measure" name="measure[]" placeholder =Cup">
 				</div>
 			</div>
 			<button id="add">Add New Ingredient</button>
+			<button id="create">Create Meal</button>
 
 
 
