@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="homeMeal.css">
+	<link rel="stylesheet" type="text/css" href="greceries.css">
 </head>
 <body>
 	<header>
@@ -22,20 +22,29 @@
 		<br><br><br><br><br><br><br>
 		<h1>Your Groceries List</h1>
 
+		<table>
+			<tr>
+				<th>Total</th>
+				<th>Hame</th>
+			</tr>
+		
 		<?php
 			$statement = $db->prepare("SELECT total, name FROM ingredients");
 			$statement->execute(); 
 
-
-			echo "<h3> Total<pre>	<pre>Name</h3>";
 			while ( $row = $statement->fetch(PDO::FETCH_ASSOC)) {
 				
 				$total = $row['total'];
 				$name = $row['name'];
 
-				echo "<p> $total<pre>	</pre>$name</p>";
+				echo "<tr>";
+				echo "<td>$total</td>";
+				echo "<td>$name</td>";
+				echo "<td><botton>remove</botton></td>";
+				echo "</tr>";
 			}
 		?>
+		</table>
 	</main>
 
 </body>
