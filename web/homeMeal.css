@@ -57,6 +57,9 @@ a.link:hover {
   text-align: center;
 }
 
+a.meals {
+  text-decoration: none;
+}
 a.meals:hover {
   background-color: #F0F0F0;
 
