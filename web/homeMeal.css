@@ -38,7 +38,7 @@ a:hover {
 }
 
 #div {
-  background-color: #F0F0F0;
+  background-color: #fafafa;
   width: 250;
   height: 250;
   display: inline-block;
@@ -55,4 +55,9 @@ a:hover {
 
 #description {
   text-align: center;
+}
+
+div#div: hover {
+  background-color: #F0F0F0;
+
 }

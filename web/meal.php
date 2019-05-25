@@ -31,7 +31,7 @@
 		<h1>Add a Meal</h1>
 
 		<div id="from">
-			<label>Meal Name</label>
+			<label>Meal Name </label>
 			<input type="text" name="name" placeholder="Enter a Meal Name"><br><br>
 
 			<label>Description</label><br>
@@ -40,7 +40,7 @@
 			<label>Directions</label><br>
 			<textarea name="Directions" placeholder="Enter the directions" rows="5" cols="100"></textarea><br><br>
 
-			<label>Serving Size</label><br>
+			<label>Serving Size </label>
 			<input type="text" name="size" placeholder="Enter a integer"><br><br>
 
 			<div>
