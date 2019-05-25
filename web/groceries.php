@@ -21,7 +21,21 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Your Groceries List</h1>
-		
+
+		<?php
+			$statement = $db->prepare("SELECT total, name FROM ingredients");
+			$statement->execute(); 
+
+
+			echo "<h1> Total			Name</h1>";
+			while ( $row = $statement->fetch(PDO::FETCH_ASSOC)) {
+				
+				$total = $row['total'];
+				$name = $row['name'];
+
+				echo "<p> $total			$name</p>";
+			}
+		?>
 	</main>
 
 </body>
