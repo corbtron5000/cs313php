@@ -30,32 +30,31 @@
 		<br><br><br><br><br><br><br>
 		<h1>Add a Meal</h1>
 
-			<label>Meal Name</label><br>
-			<input type="text" name="name" placeholder="Enter a Meal Name">
+		<label>Meal Name</label><br>
+		<input type="text" name="name" placeholder="Enter a Meal Name">
 
-			<label>Description</label><br>
-			<textarea name="description" placeholder="Enter a description"></textarea>
+		<label>Description</label><br>
+		<textarea name="description" placeholder="Enter a description"></textarea>
 
-			<label>Directions</label><br>
-			<textarea name="Directions" placeholder="Enter the directions"></textarea>
+		<label>Directions</label><br>
+		<textarea name="Directions" placeholder="Enter the directions"></textarea>
 
-			<label>Serving Size</label><br>
-			<input type="text" name="size" placeholder="Enter a integer">
+		<label>Serving Size</label><br>
+		<input type="text" name="size" placeholder="Enter a integer">
 
-			<div>
-				<label>Ingredients</label><br>
-				<div class="div">
-					<label>Enter Ingredient </label>
-					<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name"><br>
-					<label>Enter Quantity measurementa as Number </label>
-					<input type="text" id="quantity" name="quantity[]" placeholder="1.5"><br>
-					<label>Enter Measurement Type </label>
-					<input type="text" id="measure" name="measure[]" placeholder ="Cup">
-				</div>
+		<div>
+			<label>Ingredients</label><br>
+			<div class="div">
+				<label>Enter Ingredient </label>
+				<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name"><br>
+				<label>Enter Quantity measurementa as Number </label>
+				<input type="text" id="quantity" name="quantity[]" placeholder="1.5"><br>
+				<label>Enter Measurement Type </label>
+				<input type="text" id="measure" name="measure[]" placeholder ="Cup">
 			</div>
 			<button id="add">Add New Ingredient</button>
 			<button id="create">Create Meal</button>
-
+		</div>
 
 
 	</main>
