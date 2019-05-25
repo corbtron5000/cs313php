@@ -33,6 +33,10 @@ a:hover {
 	background-color: #383838;
 }
 
+body {
+  margin-left: 80%;
+  margin-right: 80%;
+}
 #title {
   text-align: center;
 }
