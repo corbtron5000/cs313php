@@ -34,7 +34,8 @@ a:hover {
 }
 
 body {
-  margin: 80%;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 #title {
   text-align: center;
