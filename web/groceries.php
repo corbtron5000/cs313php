@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="greceries.css">
+	<link rel="stylesheet" type="text/css" href="groceries.css">
 </head>
 <body>
 	<header>
