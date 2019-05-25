@@ -43,11 +43,11 @@ body {
 
 .div {
    display: inline-block;
-   background-color: #F0F0F0;
-  width: 250;
-  height: 251;
+   padding: 10px;
+   width: 250;
+    height: 251;
 }
 
 #form {
-  align-content: center;
+  background-color: #F0F0F0;
 }
