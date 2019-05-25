@@ -22,7 +22,7 @@
 		<br><br><br><br><br><br><br>
 		<h1>Your Groceries List</h1>
 
-		<div id="table">
+		<div id="table" align="center">
 		<table>
 			<tr>
 				<th>Total</th>
