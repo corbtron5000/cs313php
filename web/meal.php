@@ -12,7 +12,7 @@
 	<script>
 		$(document).ready(function() {
 			$('#add').click(function() {
-				$('div.div:first').clone().insertBefore(this).find('input').val('')
+				$('div.div:first').clone().insertAfter('div.div:last').find('input').val('')
 			});
 		});
 	</script>
@@ -31,10 +31,10 @@
 		<h1>Add a Meal</h1>
 
 		<label>Meal Name</label><br>
-		<input type="text" name="name" placeholder="Enter a Meal Name">
+		<input type="text" name="name" placeholder="Enter a Meal Name"><br>
 
 		<label>Description</label><br>
-		<textarea name="description" placeholder="Enter a description"></textarea>
+		<textarea name="description" placeholder="Enter a description"></textarea><br>
 
 		<label>Directions</label><br>
 		<textarea name="Directions" placeholder="Enter the directions"></textarea>
@@ -52,7 +52,7 @@
 				<label>Enter Measurement Type </label>
 				<input type="text" id="measure" name="measure[]" placeholder ="Cup">
 			</div>
-			<button id="add">Add New Ingredient</button>
+			<br><button id="add">Add New Ingredient</button>
 			<button id="create">Create Meal</button>
 		</div>
 
