@@ -36,6 +36,7 @@ a:hover {
 body {
   margin-left: 200px;
   margin-right: 200px;
+  background-color: #fafafa;
 }
 #title {
   text-align: center;
@@ -46,8 +47,4 @@ body {
    padding: 10px;
    width: 250;
     height: 251;
-}
-
-#from {
-  background-color: #fafafa;
 }
