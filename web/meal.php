@@ -44,7 +44,7 @@
 
 			<div>
 				<label>Ingredients</label><br>
-				<div class="ingredDiv">
+				<div class="div">
 					<label>Enter Ingredient </label><br>
 					<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name"><br>
 					<label>Enter Quantity measurementa as Number </label>
