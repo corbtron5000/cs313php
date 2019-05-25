@@ -37,7 +37,7 @@ a:hover {
   text-align: center;
 }
 
-#div {
+.div {
    display: inline-block;
    background-color: #F0F0F0;
   width: 250;
