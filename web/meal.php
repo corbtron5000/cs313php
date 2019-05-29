@@ -52,7 +52,7 @@
 					<input type="text" id="quantity" name="quantity[]" placeholder="1.5"><br>
 					<label>Enter Measurement Type </label>
 					<input type="text" id="measure" name="measure[]" placeholder ="Cup">
-			</div>
+				</div>
 				<br><button id="add">Add New Ingredient</button>
 				<button id="create">Create Meal</button>
 			</div>

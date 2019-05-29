@@ -8,6 +8,14 @@
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="meal.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#add').click(function() {
+				$('div.div:first').clone().insertAfter('div.div:last').find('input').val('')
+			});
+		});
+	</script>
 </head>
 <body>
 	<header>
@@ -27,7 +35,7 @@
 			$statement = $db->prepare("SELECT meals_id, name, serving_size, description, directions FROM meals");
 			$statement->execute();
 
-			echo "<div id=parent>";
+			echo "<div id=from>";
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 				$name = $row['name'];
@@ -45,7 +53,7 @@
 				echo "<textarea name='Directions' placeholder='Enter the directions' rows='5' cols='100'>$direction</textarea><br><br>";
 				echo "<label>Serving Size </label>";
 				echo "<input type='text' name='size' placeholder='Enter a integer' value='$serving'><br><br>";
-				echo "<div><label>Ingredients</label><br><br><div class='div'>";
+				echo "<div><label>Ingredients</label><br><br>";
 			}
 
 			$statement = $db->prepare("select mi.ingredient_quantity, mi.ingredient_measurements, i.name from ingredients as i join mealsIngredients as mi on i.ingredients_id = mi.ingredients_id join meals as m on m.meals_id = mi.meals_id");
@@ -54,14 +62,20 @@
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 				$names = $row['name'];
-				$measurement = $row['mi.ingredient_measurements'];
-				$quantity = $row['mi.ingredient_quantity'];
+				$measurement = $row['ingredient_measurements'];
+				$quantity = $row['ingredient_quantity'];
 
-				var_dump($names);
+				echo "<div class='div'>";
 				echo "<label>Enter Ingredient </label>";
 				echo "<input type='text' id='ingre' name='ingred[] placeholder='Enter the Ingredients name' value='$names'><br>";
+				echo "<label>Enter Quantity </label>";
+				echo "<input type='text' id='quantity' name='quantity[]' placeholder='1.5' value='$quantity'><br>";
+				echo "<label>Enter Measurement Type </label>";
+				echo "<input type='text' id='measure' name='measure[]' placeholder ='Cup' value='$measurement'>";
+				echo "</div>";
 			}
 
+			echo "<br><button id="add">Add New Ingredient</button><button id="create">Create Meal</button></div>";
 			echo "</div>";
 		?>
 	</main>
