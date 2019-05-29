@@ -75,7 +75,7 @@
 				echo "</div>";
 			}
 
-			echo "<br><button id="add">Add New Ingredient</button><button id="create">Create Meal</button></div>";
+			echo "<br><button id='add'>Add New Ingredient</button><button id='create'>Create Meal</button></div>";
 			echo "</div>";
 		?>
 	</main>
