@@ -53,7 +53,7 @@
 
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
-				$names = $row['i.name'];
+				$names = $row['name'];
 				$measurement = $row['mi.ingredient_measurements'];
 				$quantity = $row['mi.ingredient_quantity'];
 
