@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="homeMeal.css">
+	<link rel="stylesheet" type="text/css" href="meal.css">
 </head>
 <body>
 	<header>
@@ -20,7 +20,7 @@
 	</header>
 	<main>
 		<br><br><br><br><br><br><br>
-		<h1>List of Meals</h1>
+		<h1>Modify Meal</h1>
 
 		<?php 
 
@@ -39,6 +39,10 @@
 
 				echo "<label>Meal Name </label>";
 				echo "<input type='text' name='name' placeholder='Enter a Meal Name' value='$name'><br><br>";
+				echo "<label>Description</label><br>";
+				echo "<textarea name='description' placeholder='Enter a description' rows='5' cols='100' value='$desc'></textarea><br><br>";
+				echo "<label>Directions</label><br>";
+				echo "<textarea name='Directions' placeholder='Enter the directions' rows='5' cols='100' value='$direction'></textarea><br><br>";
 			}
 			echo "</div>";
 		?>
