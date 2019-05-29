@@ -47,6 +47,20 @@
 				echo "<input type='text' name='size' placeholder='Enter a integer' value='$serving'><br><br>";
 				echo "<div><label>Ingredients</label><br><br><div class='div'>";
 			}
+
+			$statement = $db->prepare("select mi.ingredient_quantity, mi.ingredient_measurements, i.name from ingredients as i join mealsIngredients as mi on i.ingredients_id = mi.ingredients_id join meals as m on m.meals_id = mi.meals_id");
+			$statement->execute();
+
+			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+
+				$names = $row['i.name'];
+				$measurement = $row['mi.ingredient_measurements'];
+				$quantity = $row['mi.ingredient_quantity'];
+
+				echo "<label>Enter Ingredient </label>";
+				echo "<input type='text' id='ingre' name='ingred[] placeholder='Enter the Ingredients name' value='$names'><br>";
+			}
+
 			echo "</div>";
 		?>
 	</main>
