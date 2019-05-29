@@ -43,6 +43,9 @@
 				echo "<textarea name='description' placeholder='Enter a description' rows='5' cols='100'>$desc</textarea><br><br>";
 				echo "<label>Directions</label><br>";
 				echo "<textarea name='Directions' placeholder='Enter the directions' rows='5' cols='100'>$direction</textarea><br><br>";
+				echo "<label>Serving Size </label>";
+				echo "<input type='text' name='size' placeholder='Enter a integer' value='$serving'><br><br>";
+				echo "<div><label>Ingredients</label><br><br><div class='div'>";
 			}
 			echo "</div>";
 		?>
