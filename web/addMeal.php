@@ -57,6 +57,7 @@
 				$measurement = $row['mi.ingredient_measurements'];
 				$quantity = $row['mi.ingredient_quantity'];
 
+				var_dump($names);
 				echo "<label>Enter Ingredient </label>";
 				echo "<input type='text' id='ingre' name='ingred[] placeholder='Enter the Ingredients name' value='$names'><br>";
 			}
