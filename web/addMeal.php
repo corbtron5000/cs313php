@@ -38,7 +38,7 @@
 
 
 				echo "<label>Meal Name </label>";
-				echo "<input type='text' name='name' placeholder='Enter a Meal Name' value='$name'><br><br>"
+				echo "<input type='text' name='name' placeholder='Enter a Meal Name' value='$name'><br><br>";
 			}
 			echo "</div>";
 		?>
