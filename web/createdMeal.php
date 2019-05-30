@@ -27,11 +27,17 @@
 			$desc = $_POST['description'];
 			$dirc = $_POST['Directions'];
 			$size = $_POST['size'];
+			$ingr = $_POST['ingred'];
+			$quan = $_POST['quantity'];
+			$meas = $_POST['measurement']
 
 			echo "name=$name\n";
 			echo "description=$desc\n";
 			echo "directions=$dirc\n";
 			echo "size=$size\n";
+			var_dump($ingr);
+			var_dump($quan);
+			var_dump($meas);
 		?>
 	</main>
 </body>
