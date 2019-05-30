@@ -26,7 +26,7 @@
 			$name = $_POST['name'];
 			$desc = $_POST['description'];
 			$dirc = $_POST['Directions'];
-			$size = $_POST['size']
+			$size = $_POST['size'];
 
 			echo "name=$name\n";
 			echo "description=$desc\n";
