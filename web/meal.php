@@ -30,7 +30,7 @@
 		<br><br><br><br><br><br><br>
 		<h1>Add a Meal</h1>
 
-		<form>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>", method="POST">
 			<div id="from">
 				<label>Meal Name </label>
 				<input type="text" name="name" placeholder="Enter a Meal Name"><br><br>
@@ -58,6 +58,14 @@
 					<input type="submit" name="Create Meal">
 				</div>
 			</div>
+			<?php
+				$name = htmlspecialchars($_POST['name']);
+				$desc = htmlspecialchars($_POST['description']);
+				$dirc = htmlspecialchars($_POST['Directions']);
+				$size = htmlspecialchars($_POST['size']); 
+
+				alert("name $name, description $desc, directions $dirc, size $size"); 
+			?>
 		</form>
 
 	</main>
