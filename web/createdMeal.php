@@ -29,7 +29,7 @@
 			$size = $_POST['size'];
 			$ingr = $_POST['ingred'];
 			$quan = $_POST['quantity'];
-			$meas = $_POST['measure']
+			$meas = $_POST['measure'];
 
 			echo "name=$name\n";
 			echo "description=$desc\n";
