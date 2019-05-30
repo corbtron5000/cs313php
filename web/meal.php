@@ -67,7 +67,7 @@
 				$dirc = htmlspecialchars($_POST['Directions']);
 				$size = htmlspecialchars($_POST['size']); 
 
-				echo '<script type="text/javascript">alert("name $name, description $desc, directions $dirc, size $size!");</script>'
+				echo '<script type="text/javascript">alert("name $name, description $desc, directions $dirc, size $size!");</script>';
 			}
 			?>
 		</form>
