@@ -60,7 +60,7 @@
 			</div>
 			<?php
 
-			if(isset($_POST['Create Meal'])){
+			if(isset($_POST['submit'])){
 
 				$name = htmlspecialchars($_POST['name']);
 				$desc = htmlspecialchars($_POST['description']);
