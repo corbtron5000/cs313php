@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<?php
-
+			alert("when is this being called");
 			if(isset($_POST['Create Meal'])){
 
 				$name = htmlspecialchars($_POST['name']);
