@@ -59,12 +59,16 @@
 				</div>
 			</div>
 			<?php
+
+			if(isset($_POST['Create Meal'])){
+
 				$name = htmlspecialchars($_POST['name']);
 				$desc = htmlspecialchars($_POST['description']);
 				$dirc = htmlspecialchars($_POST['Directions']);
 				$size = htmlspecialchars($_POST['size']); 
 
 				alert("name $name, description $desc, directions $dirc, size $size"); 
+			}
 			?>
 		</form>
 
