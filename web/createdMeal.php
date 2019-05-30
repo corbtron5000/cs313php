@@ -35,9 +35,9 @@
 			echo "description=$desc\n";
 			echo "directions=$dirc\n";
 			echo "size=$size\n";
-			var_dump($ingr);
-			var_dump($quan);
-			var_dump($meas);
+			var_dump("$ingr");
+			var_dump("$quan");
+			var_dump("$meas");
 		?>
 	</main>
 </body>
