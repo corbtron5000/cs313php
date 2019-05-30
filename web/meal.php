@@ -50,9 +50,9 @@
 						<label>Enter Ingredient </label>
 						<input type="text" id="ingre" name="ingred[]" placeholder="Enter the Ingredients name"><br>
 						<label>Enter Quantity </label>
-						<input type="text" id="quantity" name="quantity[]" placeholder="1.5"><br>
+						<input type="text" id="quan" name="quantity[]" placeholder="1.5"><br>
 						<label>Enter Measurement Type </label>
-						<input type="text" id="measure" name="measure[]" placeholder ="Cup">
+						<input type="text" id="meas" name="measure[]" placeholder ="Cup">
 					</div>
 					<br><button type="button" id="add">Add New Ingredient</button>
 					<input type="submit" name="Create Meal">

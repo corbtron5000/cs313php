@@ -27,9 +27,9 @@
 			$desc = $_POST['description'];
 			$dirc = $_POST['Directions'];
 			$size = $_POST['size'];
-			$ingr = $_POST['ingred[]'];
-			$quan = $_POST['quantity[]'];
-			$meas = $_POST['measurement[]']
+			$ingr = $_POST['ingred'];
+			$quan = $_POST['quantity'];
+			$meas = $_POST['measure']
 
 			echo "name=$name\n";
 			echo "description=$desc\n";
