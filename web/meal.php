@@ -30,7 +30,7 @@
 		<br><br><br><br><br><br><br>
 		<h1>Add a Meal</h1>
 
-		<form action="", method="POST">
+		<form action="createdMeal.php", method="POST">
 			<div id="from">
 				<label>Meal Name </label>
 				<input type="text" name="name" placeholder="Enter a Meal Name"><br><br>
@@ -58,18 +58,7 @@
 					<input type="submit" name="Create Meal">
 				</div>
 			</div>
-			<?php
-			alert("when is this being called");
-			if(isset($_POST['Create Meal'])){
 
-				$name = htmlspecialchars($_POST['name']);
-				$desc = htmlspecialchars($_POST['description']);
-				$dirc = htmlspecialchars($_POST['Directions']);
-				$size = htmlspecialchars($_POST['size']); 
-
-				echo '<script type="text/javascript">alert("name $name, description $desc, directions $dirc, size $size!");</script>';
-			}
-			?>
 		</form>
 
 	</main>
