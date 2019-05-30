@@ -11,3 +11,6 @@ update meals set directions = '1 Mix powdered sugar and butter with spoon or ele
 select mi.ingredient_quantity, mi.ingredient_measurements, i.name from ingredients as i join mealsIngredients as mi on i.ingredients_id = mi.ingredients_id join meals as m on m.meals_id = mi.meals_id;
 
 delete from mealsIngredients where meals_ingredients_id = 8;
+
+
+insert into meals(name, description, Directions, serving_size) 

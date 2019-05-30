@@ -54,7 +54,7 @@
 						<label>Enter Measurement Type </label>
 						<input type="text" id="measure" name="measure[]" placeholder ="Cup">
 					</div>
-					<br><input type="button" name="Add Ingredient">
+					<br><button type="button" id="add">Add New Ingredient</button>
 					<input type="submit" name="Create Meal">
 				</div>
 			</div>
