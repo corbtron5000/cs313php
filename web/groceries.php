@@ -42,11 +42,16 @@
 					echo "<tr>";
 					echo "<td>$total</td>";
 					echo "<td>$name</td>";
-					echo '<td><button name[$id] id="bu">Remove</button></td>';
+					echo '<td><button name="b[$id]" id="bu">Remove</button></td>';
 					echo "</tr>";
 				}
 
-				if (isset($_POST[''])
+				$index = key($_POST['b']);
+
+				/*if (isset($_POST['b']['$index']))
+				{
+					echo "<h1>This worked</h1>";
+				}*/
 
 			?>
 			</table>
