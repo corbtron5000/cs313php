@@ -55,7 +55,7 @@
 				//if (isset($_POST['b']['$index']))
 				//{
 					echo "<h1>This worked</h1>";
-					$statement = $db->prepare("UPDATE ingredients SET total = 0 where ingredients_id = $code");
+					$statement = $db->prepare("UPDATE ingredients SET total = 0 where ingredients_id = $index");
 				//}
 			}
 
