@@ -39,11 +39,13 @@
 					$name = $row['name'];
 					$id = $row['ingredients_id'];
 
-					echo "<tr>";
-					echo "<td>$total</td>";
-					echo "<td>$name</td>";
-					echo '<td><button name="' . 'b[' . "$id" . ']"' . 'id="bu">Remove</button></td>';
-					echo "</tr>";
+					if ($total > 0) {
+						echo "<tr>";
+						echo "<td>$total</td>";
+						echo "<td>$name</td>";
+						echo '<td><button name="' . 'b[' . "$id" . ']"' . 'id="bu">Remove</button></td>';
+						echo "</tr>";
+					}
 				}
 
 				if (isset($_POST['b'])){
@@ -53,6 +55,7 @@
 				if (isset($_POST['b']['$index']))
 				{
 					echo "<h1>This worked</h1>";
+					$statement = $db->prepare("UPDATE ingredients SET total = 0 where ingredients_id = $code");
 				}
 			}
 
