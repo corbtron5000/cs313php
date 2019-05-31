@@ -42,7 +42,7 @@
 					echo "<tr>";
 					echo "<td>$total</td>";
 					echo "<td>$name</td>";
-					echo '<td><button name="b["$id"]" id="bu">Remove</button></td>';
+					echo '<td><button name="' . 'b[' . "$id" . ']"' . 'id="bu">Remove</button></td>';
 					echo "</tr>";
 				}
 
