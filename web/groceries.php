@@ -21,32 +21,37 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Your Groceries List</h1>
+		<form method="post" action="<?php echo($_SERVER['PHP_SELF']); ?>">
+			<div id="table" align="center">
+			<table>
+				<tr>
+					<th>Total</th>
+					<th>Name</th>
+				</tr>
+			
+			<?php
+				$statement = $db->prepare("SELECT total, name, groceries_id FROM ingredients");
+				$statement->execute(); 
 
-		<div id="table" align="center">
-		<table>
-			<tr>
-				<th>Total</th>
-				<th>Name</th>
-			</tr>
-		
-		<?php
-			$statement = $db->prepare("SELECT total, name FROM ingredients");
-			$statement->execute(); 
+				while ( $row = $statement->fetch(PDO::FETCH_ASSOC)) {
+					
+					$total = $row['total'];
+					$name = $row['name'];
+					$id = $row['groceries_id'];
 
-			while ( $row = $statement->fetch(PDO::FETCH_ASSOC)) {
-				
-				$total = $row['total'];
-				$name = $row['name'];
+					echo "<tr>";
+					echo "<td>$total</td>";
+					echo "<td>$name</td>";
+					echo '<td><button name[$id] id="bu">Remove</button></td>';
+					echo "</tr>";
+				}
 
-				echo "<tr>";
-				echo "<td>$total</td>";
-				echo "<td>$name</td>";
-				echo "<td><button>Remove</button></td>";
-				echo "</tr>";
-			}
-		?>
-		</table>
-	</div>
+				if (isset($_POST[''])
+
+			?>
+			</table>
+		</div>
+	</form>
 	</main>
 
 </body>
