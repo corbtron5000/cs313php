@@ -30,7 +30,7 @@
 				</tr>
 			
 			<?php
-				$statement = $db->prepare("SELECT total, name, ingredients_id FROM ingredients where totat > 0");
+				$statement = $db->prepare("SELECT total, name, ingredients_id FROM ingredients where total > 0");
 				$statement->execute(); 
 
 				while ( $row = $statement->fetch(PDO::FETCH_ASSOC)) {
