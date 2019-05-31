@@ -48,10 +48,10 @@
 
 				$index = key($_POST['b']);
 
-				/*if (isset($_POST['b']['$index']))
+				if (isset($_POST['b']['$index']))
 				{
 					echo "<h1>This worked</h1>";
-				}*/
+				}
 
 			?>
 			</table>
