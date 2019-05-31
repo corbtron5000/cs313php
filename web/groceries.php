@@ -46,12 +46,15 @@
 					echo "</tr>";
 				}
 
+				if (isset($_POST['b'])){
+
 				$index = key($_POST['b']);
 				echo "<h1>this is the key: $index</h1>";
 				if (isset($_POST['b']['$index']))
 				{
 					echo "<h1>This worked</h1>";
 				}
+			}
 
 			?>
 			</table>
