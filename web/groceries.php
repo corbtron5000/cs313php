@@ -30,14 +30,14 @@
 				</tr>
 			
 			<?php
-				$statement = $db->prepare("SELECT total, name, ingredients FROM ingredients");
+				$statement = $db->prepare("SELECT total, name, ingredients_id FROM ingredients");
 				$statement->execute(); 
 
 				while ( $row = $statement->fetch(PDO::FETCH_ASSOC)) {
 					
 					$total = $row['total'];
 					$name = $row['name'];
-					$id = $row['groceries_id'];
+					$id = $row['ingredients_id'];
 
 					echo "<tr>";
 					echo "<td>$total</td>";
