@@ -56,6 +56,7 @@
 				//{
 					echo "<h1>This worked</h1>";
 					$statement = $db->prepare("UPDATE ingredients SET total = 0 where ingredients_id = $index");
+					$statement->execute();
 				//}
 			}
 
