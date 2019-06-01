@@ -57,10 +57,11 @@
 				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients where name = $ingredient");
 				$statement->execute();
 
+				echo "I am here";
 				$row = $statement->fetch(PDO::FETCH_ASSOC);
 
 				echo "what is in row: $row";
-				
+
 				$ingred = $row['name'];
 				$ingID = $row['ingredients_id'];
 
