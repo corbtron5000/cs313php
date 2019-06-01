@@ -67,8 +67,8 @@
 				else {
 					echo "it did not have it<br>";
 
-					$measure = $meas['$count'];
-					$quantity = $quan['$count'];
+					$measure = $meas["$count"];
+					$quantity = $quan["$count"];
 
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
 					//$statement = db->prepare("INSERT INTO ingredients (name, seasoning, ");
