@@ -54,7 +54,7 @@
 
 				echo("Did I get here: $ingredient<br>");
 
-				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients");
+				$statement = $db->prepare('SELECT name, ingredients_id FROM ingredients where name = "$ingred"');
 				$statement->execute();
 
 				echo "I am here";
