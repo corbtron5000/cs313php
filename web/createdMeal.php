@@ -88,7 +88,7 @@
 				else {
 
 					$seasoning = false;
-					$total = 0;
+					$total = 0.0;
 					$groceriesId = 1;
 
 					echo "groceries_id: $groceriesId, total: $total, seasoning: $seasoning<br>";
@@ -116,14 +116,14 @@
 
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
-					/*$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
+					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
 
 					$statement3->bindValue(':mealId', $mealId);
 					$statement3->bindValue(':ingredientID', $ingredientID);
 					$statement3->bindValue(':quantity', $quantity);
 					$statement3->bindValue(':measure', $measure);
 
-					$statement3->execute();*/
+					$statement3->execute();
 
 
 				}
