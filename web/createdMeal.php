@@ -87,7 +87,7 @@
 					$statement1->execute();
 
 
-				}
+				}//does not have the ingredient'
 				else {
 					echo "it did not have it<br>";
 
@@ -96,7 +96,7 @@
 
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
 
-					$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
+					$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(');
 
 					$statement2->bindValue(':ingredient', $ingredient);
 					$statement2->bindValue(':seasoning', $seasoning);
@@ -113,14 +113,14 @@
 
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
-					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
+					/*$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
 
 					$statement3->bindValue(':mealId', $mealId);
 					$statement3->bindValue(':ingredientID', $ingredientID);
 					$statement3->bindValue(':quantity', $quantity);
 					$statement3->bindValue(':measure', $measure);
 
-					$statement3->execute();
+					$statement3->execute();*/
 
 
 				}
