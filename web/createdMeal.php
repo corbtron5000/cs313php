@@ -89,7 +89,6 @@
 				}//does not have the ingredient'
 				else {
 
-					try {
 					$seasoning = false;
 					$total = 0.0;
 					$groceriesId = 1;
@@ -102,23 +101,30 @@
 
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
 
-					$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
+
+					$statement2 = $db->prepare('SELECT name From ingredient');
+					/*$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
 
 					$statement2->bindValue(':ingredient', $ingredient);
 					$statement2->bindValue(':seasoning', $seasoning);
 					$statement2->bindValue(':total', $total);
-					$statement2->bindValue(':groceriesId', $groceriesId);
+					$statement2->bindValue(':groceriesId', $groceriesId);*/
 
 					echo "I go after pushing ingredient to table<br>";
 
 					$statement2->execute();
 
+					//$rows = $statement4->fetch(PDO::FETCH_ASSOC);
+					//var_dub($rows);
+
 					echo "Do I even get hear";
 
+
+
+
+
 					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
-				}catch (Expection $ex) {
-					echo "Details: $ex";
-				}
+				
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
 					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
