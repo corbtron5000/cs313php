@@ -85,6 +85,7 @@
 
 					$statement1->execute();
 
+					echo "this going towork<br>";
 
 				}//does not have the ingredient'
 				else {
@@ -130,7 +131,7 @@
 
 					$statement3->execute();
 
-					echo "they end<br>"
+					echo "they end<br>";
 
 				}
 
