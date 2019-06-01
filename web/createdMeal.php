@@ -102,20 +102,17 @@
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
 
 
-					$statement2 = $db->prepare('SELECT name From ingredients');
-					/*$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
+					//$statement2 = $db->prepare('SELECT name From ingredients');
+					$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
 
 					$statement2->bindValue(':ingredient', $ingredient);
 					$statement2->bindValue(':seasoning', $seasoning);
 					$statement2->bindValue(':total', $total);
-					$statement2->bindValue(':groceriesId', $groceriesId);*/
+					$statement2->bindValue(':groceriesId', $groceriesId);
 
 					echo "I go after pushing ingredient to table<br>";
 
 					$statement2->execute();
-
-					//$rows = $statement4->fetch(PDO::FETCH_ASSOC);
-					//var_dub($rows);
 
 					echo "Do I even get hear";
 
@@ -123,7 +120,7 @@
 
 
 
-					/*$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
+					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
 				
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
@@ -134,7 +131,7 @@
 					$statement3->bindValue(':quantity', $quantity);
 					$statement3->bindValue(':measure', $measure);
 
-					$statement3->execute()*/
+					$statement3->execute();
 
 
 				}
