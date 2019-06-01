@@ -123,7 +123,7 @@
 
 
 
-					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
+					/*$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
 				
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
@@ -134,7 +134,7 @@
 					$statement3->bindValue(':quantity', $quantity);
 					$statement3->bindValue(':measure', $measure);
 
-					$statement3->execute();
+					$statement3->execute()*/
 
 
 				}
