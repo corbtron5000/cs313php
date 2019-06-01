@@ -58,20 +58,16 @@
 				$statement->execute();
 
 				echo "I am here";
-				$row = $statement->fetch(PDO::FETCH_ASSOC);
+				while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {	
 
-				echo "what is in row: $row";
+					echo "what is in row: $row";
 
-				$ingred = $row['name'];
-				$ingID = $row['ingredients_id'];
+					$ingred = $row['name'];
+					$ingID = $row['ingredients_id'];
 
 
-				echo ("what is in ingred $ingred");
-				if ($ingred == $ingredient) {
-
-					echo("The ingredient is: $ingredient and id: $ingId");
-
-				}
+					echo ("what is in ingred $ingred and id: $ingID");
+				
 			}
 			
 
