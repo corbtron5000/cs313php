@@ -54,7 +54,7 @@
 
 			$mealId = $db->lastInsertId("meals_meals_id_seq");
 
-			echo "Have i got the meal id: $mealId";
+			echo "<br><br>Have i got the meal id: $mealId";
 
 			foreach ($ingr as $ingredient) {
 
@@ -99,10 +99,13 @@
 					$statement->bindValue(':total', $total);
 					$statement->bindValue(':groceriesId', $groceriesId);
 
+					echo "I go after pushing ingredient to table<br>";
 
 					$statement->execute();
 
 					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
+
+					echo "this is the ingredient id after insert: $ingredientID<br>";
 
 					$statement = $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
 
