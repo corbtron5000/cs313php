@@ -52,6 +52,8 @@
 
 			foreach ($ingr as $ingredient) {
 
+				echo("Did I get here: $ingredient");
+
 				$statement = $db->prepare('SELECT name, ingredients_id FROM ingredients where name = $ingredient');
 				$statement->execute();
 
@@ -59,6 +61,8 @@
 				$ingred = $row['name'];
 				$ingID = $row['ingredients_id'];
 
+
+				echo ("what is in ingred $ingred");
 				if ($ingred == $ingredient) {
 
 					echo("The ingredient is: $ingredient and id: $ingId");
