@@ -102,7 +102,7 @@
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
 
 
-					$statement2 = $db->prepare('SELECT name From ingredient');
+					$statement2 = $db->prepare('SELECT name From ingredients');
 					/*$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
 
 					$statement2->bindValue(':ingredient', $ingredient);
