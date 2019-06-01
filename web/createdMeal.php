@@ -41,6 +41,7 @@
 
 			//variables 
 			$count = 0;
+			
 
 			$statement = $db->prepare('INSERT INTO meals(name, description, Directions, serving_size) VALUES(:name, :description, :direction, :size)');
 
@@ -58,6 +59,7 @@
 			foreach ($ingr as $ingredient) {
 
 				echo("<br><br>Did I get here: $ingredient<br>");
+
 
 				$statement4 = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
 				$statement4->execute();
@@ -87,6 +89,7 @@
 				}//does not have the ingredient'
 				else {
 
+					try {
 					$seasoning = false;
 					$total = 0.0;
 					$groceriesId = 1;
@@ -113,7 +116,9 @@
 					echo "Do I even get hear";
 
 					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
-
+				}catch (Expection $ex) {
+					echo "Details: $ex";
+				}
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
 					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
