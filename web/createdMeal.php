@@ -67,6 +67,7 @@
 
 
 					echo ("what is in ingred $ingred and id: $ingID");
+				}
 				
 			}
 			
