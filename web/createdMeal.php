@@ -42,11 +42,12 @@
 			$seasoning = false;
 			$total = 0;
 			$groceriesId = 1;
+
 			$statement = $db->prepare('INSERT INTO meals(name, description, Directions, serving_size) VALUES(:name, :description, :direction, :size)');
 
 			$statement->bindValue(':name', $name);
 			$statement->bindValue(':description', $description);
-			$statement->bindValue(':direction' $direction);
+			$statement->bindValue(':direction', $direction);
 			$statement->bindValue(':size', $size);
 
 			$statement->execute();
