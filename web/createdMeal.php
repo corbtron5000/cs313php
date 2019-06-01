@@ -70,7 +70,7 @@
 
 					$ingredientId = $row["$ingredient_id"];
 
-					echo "the ingredient id: $ingredientId";
+					//echo "the ingredient id: $ingredientId";
 
 					$statement2-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientId, :quantity, :measure)");
 
