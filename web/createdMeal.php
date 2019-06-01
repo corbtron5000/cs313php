@@ -89,8 +89,6 @@
 				}//does not have the ingredient'
 				else {
 
-					$newDb = get_db();
-
 					$seasoning = false;
 					$total = 0.0;
 					$groceriesId = 1;
@@ -104,7 +102,7 @@
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
 
 
-					$statement2 = $newDb->prepare('SELECT name From ingredient');
+					$statement2 = $db->prepare('SELECT name From ingredient');
 					/*$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
 
 					$statement2->bindValue(':ingredient', $ingredient);
