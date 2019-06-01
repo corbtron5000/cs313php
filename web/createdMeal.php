@@ -38,7 +38,7 @@
 			var_dump($ingr);
 			var_dump($quan);
 			var_dump($meas);
-
+			$count = 0;
 			/*$statement = $db->prepare('INSERT INTO meals(name, description, Directions, serving_size) VALUES(:name, :description, :direction, :size');
 
 			$statement->bindValue(':name', $name);
@@ -57,17 +57,21 @@
 				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
 				$statement->execute();
 
-				echo "I am here";
+				echo "I am here<br>";
 
 				$row = $statement->fetch(PDO::FETCH_ASSOC);
 
 				if ($row) {
-					$ingred = $row['name'];
-					$ingID = $row['ingredients_id'];
 					echo "it already has it<br>";
 				}
 				else {
 					echo "it did not have it<br>";
+
+					$measure = $meas['$count'];
+					$quantity = $quan['$count'];
+
+					echo "this is quantity: $quantity and this is measurement: $measure<br>";
+					//$statement = db->prepare("INSERT INTO ingredients (name, seasoning, ");
 				}
 
 
