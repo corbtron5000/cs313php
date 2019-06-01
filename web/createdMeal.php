@@ -31,10 +31,10 @@
 			$quan = $_POST['quantity'];
 			$meas = $_POST['measure'];
 
-			echo "name=$name\n";
-			echo "description=$description\n";
-			echo "directions=$direction\n";
-			echo "size=$size\n";
+			echo "name=$name<br?";
+			echo "description=$description<br>";
+			echo "directions=$direction<br>";
+			echo "size=$size<br>";
 			var_dump($ingr);
 			var_dump($quan);
 			var_dump($meas);
@@ -52,9 +52,9 @@
 
 			foreach ($ingr as $ingredient) {
 
-				echo("Did I get here: $ingredient<br>");
+				echo("<br><br>Did I get here: $ingredient<br>");
 
-				$statement = $db->prepare('SELECT name, ingredients_id FROM ingredients where name = $ingredient');
+				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients where name = $ingredient");
 				$statement->execute();
 
 				echo "I am here";
