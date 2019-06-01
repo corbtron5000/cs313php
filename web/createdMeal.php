@@ -89,7 +89,7 @@
 				}//does not have the ingredient'
 				else {
 
-					$seasoning = false;
+					$seasoning = 'f';
 					$total = 0.0;
 					$groceriesId = 1;
 
