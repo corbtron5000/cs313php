@@ -58,6 +58,19 @@
 				$statement->execute();
 
 				echo "I am here";
+
+				$row = $statement->fetch(PDO::FETCH_ASSOC);
+
+				if ($row) {
+					$ingred = $row['name'];
+					$ingID = $row['ingredients_id'];
+					echo "it already has it<br>";
+				}
+				else {
+					echo "it did not have it<br>";
+				}
+
+
 				/*while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {	
 
 					echo "what is in row: $row";
