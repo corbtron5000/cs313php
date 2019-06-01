@@ -76,7 +76,7 @@
 
 					echo "the ingredient id: $ingredientId";
 
-					$statement1 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientId, :quantity, :measure)');
+					$statement1 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurements) VALUES(:mealId, :ingredientId, :quantity, :measure)');
 
 					$statement1->bindValue(':mealId', $mealId);
 					$statement1->bindValue(':ingredientId', $ingredientId);
