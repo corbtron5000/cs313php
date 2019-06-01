@@ -21,6 +21,7 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Meal was Created</h1>
+		<a href="prove5.php">Return back to home page</a>
 		<?php
 
 			$name = $_POST['name'];
@@ -31,13 +32,13 @@
 			$quan = $_POST['quantity'];
 			$meas = $_POST['measure'];
 
-			echo "name=$name<br?";
+			/*echo "name=$name<br?";
 			echo "description=$description<br>";
 			echo "directions=$direction<br>";
 			echo "size=$size<br>";
 			var_dump($ingr);
 			var_dump($quan);
-			var_dump($meas);
+			var_dump($meas);*/
 
 			//variables 
 			$count = 0;
@@ -54,27 +55,27 @@
 
 			$mealId = $db->lastInsertId("meals_meals_id_seq");
 
-			echo "<br><br>Have i got the meal id: $mealId";
+			//echo "<br><br>Have i got the meal id: $mealId";
 
 			foreach ($ingr as $ingredient) {
 
-				echo("<br><br>Did I get here: $ingredient<br>");
+				//echo("<br><br>Did I get here: $ingredient<br>");
 
 
 				$statement4 = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
 				$statement4->execute();
 
-				echo "I am here<br>";
+				//echo "I am here<br>";
 
 				$row = $statement4->fetch(PDO::FETCH_ASSOC);
 
 				//this is for already displayed ingredients
 				if ($row) {
-					echo "it already has it<br>";
+					//echo "it already has it<br>";
 
 					$ingredientId = $row['ingredients_id'];
 
-					echo "the ingredient id: $ingredientId";
+					//echo "the ingredient id: $ingredientId";
 					$measure = $meas["$count"];
 					$quantity = $quan["$count"];
 
@@ -87,7 +88,7 @@
 
 					$statement1->execute();
 
-					echo "this going towork<br>";
+					//echo "this going towork<br>";
 
 				}//does not have the ingredient'
 				else {
@@ -96,13 +97,13 @@
 					$total = 0.0;
 					$groceriesId = 1;
 
-					echo "groceries_id: $groceriesId, total: $total, seasoning: $seasoning<br>";
-					echo "it did not have it<br>";
+					//echo "groceries_id: $groceriesId, total: $total, seasoning: $seasoning<br>";
+					//echo "it did not have it<br>";
 
 					$measure = $meas["$count"];
 					$quantity = $quan["$count"];
 
-					echo "this is quantity: $quantity and this is measurement: $measure<br>";
+					//echo "this is quantity: $quantity and this is measurement: $measure<br>";
 
 
 					//$statement2 = $db->prepare('SELECT name From ingredients');
@@ -113,16 +114,16 @@
 					$statement2->bindValue(':total', $total);
 					$statement2->bindValue(':groceriesId', $groceriesId);
 
-					echo "I go after pushing ingredient to table<br>";
+					//echo "I go after pushing ingredient to table<br>";
 
 					$statement2->execute();
 
-					echo "Do I even get hear<br>";
+					//echo "Do I even get hear<br>";
 
 
 					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
 				
-					echo "this is the ingredient id after insert: $ingredientID<br>";
+					//echo "this is the ingredient id after insert: $ingredientID<br>";
 
 					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurements) VALUES(:mealId, :ingredientID, :quantity, :measure)');
 
@@ -133,7 +134,7 @@
 
 					$statement3->execute();
 
-					echo "they end<br>";
+					//echo "they end<br>";
 
 				}
 
