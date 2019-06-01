@@ -75,6 +75,8 @@
 					$ingredientId = $row['ingredients_id'];
 
 					echo "the ingredient id: $ingredientId";
+					$measure = $meas["$count"];
+					$quantity = $quan["$count"];
 
 					$statement1 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurements) VALUES(:mealId, :ingredientId, :quantity, :measure)');
 
