@@ -39,7 +39,10 @@
 			var_dump($quan);
 			var_dump($meas);
 			$count = 0;
-			/*$statement = $db->prepare('INSERT INTO meals(name, description, Directions, serving_size) VALUES(:name, :description, :direction, :size');
+			$seasoning = false;
+			$total = 0;
+			$groceriesId = 1;
+			$statement = $db->prepare('INSERT INTO meals(name, description, Directions, serving_size) VALUES(:name, :description, :direction, :size)');
 
 			$statement->bindValue(':name', $name);
 			$statement->bindValue(':description', $description);
@@ -48,7 +51,7 @@
 
 			$statement->execute();
 
-			$mealId = $db->lastInsertedId("meals_id_seq");*/
+			$mealId = $db->lastInsertedId("meals_id_seq");
 
 			foreach ($ingr as $ingredient) {
 
@@ -61,8 +64,22 @@
 
 				$row = $statement->fetch(PDO::FETCH_ASSOC);
 
+				//
 				if ($row) {
 					echo "it already has it<br>";
+
+					$ingredientId = $row["$ingredient_id"];
+
+					$statement-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientId, :quantity, :measure)");
+
+					$statement->bindValue(':mealId', $mealId);
+					$statement->bindValue(':ingredientId', $ingredientId);
+					$statement->bindValue(':quantity', $quantity);
+					$statement->bindValue(':measure', $measure);
+
+					$statement->execute();
+
+
 				}
 				else {
 					echo "it did not have it<br>";
@@ -71,21 +88,32 @@
 					$quantity = $quan["$count"];
 
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
-					//$statement = db->prepare("INSERT INTO ingredients (name, seasoning, ");
+					$statement = $db->prepare("INSERT INTO ingredients (name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)");
+
+					$statement->bindValue(':ingredient', $ingredient);
+					$statement->bindValue(':seasoning', $seasoning);
+					$statement->bindValue(':total' $total);
+					$statement->bindValue(':groceriesId', $groceriesId);
+
+
+					$statement->execute();
+
+					$ingredientID = $db->lastInsertedId("ingredients_id_seq");
+
+					$statement-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
+
+					$statement->bindValue(':mealId', $mealId);
+					$statement->bindValue(':ingredientID', $ingredientID);
+					$statement->bindValue(':quantity', $quantity);
+					$statement->bindValue(':measure', $measure);
+
+					$statement->execute();
+
+
 				}
 
+				$count = $count + 1;
 
-				/*while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {	
-
-					echo "what is in row: $row";
-
-					$ingred = $row['name'];
-					$ingID = $row['ingredients_id'];
-
-
-					echo ("what is in ingred $ingred and id: $ingID");
-				}*/
-				
 			}
 			
 
