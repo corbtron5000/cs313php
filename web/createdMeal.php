@@ -52,26 +52,25 @@
 
 			$statement->execute();
 
-			$mealId = $db->lastInsertedId("meals_id_seq");
+			$mealId = $db->lastInsertedId("meals_meals_id_seq");
 
 			foreach ($ingr as $ingredient) {
 
 				echo("<br><br>Did I get here: $ingredient<br>");
 
 				$statement1 = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
-				$statemen1->execute();
+				$statement1->execute();
 
 				echo "I am here<br>";
 
 				$row = $statement1->fetch(PDO::FETCH_ASSOC);
 
-				//
 				if ($row) {
 					echo "it already has it<br>";
 
 					$ingredientId = $row["$ingredient_id"];
 
-					echo "this is ingredients id: $ingredientId";
+					echo "the ingredient id: $ingredientId";
 
 					$statement2-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientId, :quantity, :measure)");
 
@@ -101,16 +100,16 @@
 
 					$statement3->execute();
 
-					$ingredientID = $db->lastInsertedId("ingredients_id_seq");
+					$ingredientID = $db->lastInsertedId("ingredients_ingredients_id_seq");
 
-					$statement4-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
+					$statement-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
 
 					$statement4->bindValue(':mealId', $mealId);
 					$statement4->bindValue(':ingredientID', $ingredientID);
 					$statement4->bindValue(':quantity', $quantity);
 					$statement4->bindValue(':measure', $measure);
 
-					$statement4->execute();
+					$statement->execute();
 
 
 				}
