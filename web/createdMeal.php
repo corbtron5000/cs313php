@@ -52,7 +52,7 @@
 
 			$statement->execute();
 
-			$mealId = $db->lastInsertedId("meals_meals_id_seq");
+			$mealId = $db->lastInsertId("meals_meals_id_seq");
 
 			echo "Have i got the meal id: $mealId";
 
@@ -102,7 +102,7 @@
 
 					$statement->execute();
 
-					$ingredientID = $db->lastInsertedId("ingredients_ingredients_id_seq");
+					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
 
 					$statement = $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
 
