@@ -74,7 +74,7 @@
 
 					echo "the ingredient id: $ingredientId";
 
-					$statement = $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientId, :quantity, :measure)");
+					$statement = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientId, :quantity, :measure)');
 
 					$statement->bindValue(':mealId', $mealId);
 					$statement->bindValue(':ingredientId', $ingredientId);
@@ -92,7 +92,7 @@
 					$quantity = $quan["$count"];
 
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
-					$statement = $db->prepare("INSERT INTO ingredients (name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)");
+					$statement = $db->prepare("INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)");
 
 					$statement->bindValue(':ingredient', $ingredient);
 					$statement->bindValue(':seasoning', $seasoning);
@@ -107,7 +107,7 @@
 
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
-					$statement = $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
+					$statement = $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)");
 
 					$statement->bindValue(':mealId', $mealId);
 					$statement->bindValue(':ingredientID', $ingredientID);
