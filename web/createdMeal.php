@@ -52,12 +52,15 @@
 
 			foreach ($ingr as $ingredient) {
 
-				echo("Did I get here: $ingredient");
+				echo("Did I get here: $ingredient<br>");
 
-				$statement = $db->prepare('SELECT name, ingredients_id FROM ingredients where name = $ingredient');
+				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients where name = $ingredient");
 				$statement->execute();
 
 				$row = $statement->fetch(PDO::FETCH_ASSOC);
+
+				echo "what is in row: $row";
+				
 				$ingred = $row['name'];
 				$ingID = $row['ingredients_id'];
 
