@@ -13,4 +13,8 @@ select mi.ingredient_quantity, mi.ingredient_measurements, i.name from ingredien
 delete from mealsIngredients where meals_ingredients_id = 8;
 
 
-insert into meals(name, description, Directions, serving_size) 
+insert into meals(name, description, Directions, serving_size);
+
+update ingredients set total = 0, groceries_id = null where ingredients_id = $code;
+
+insert into meals(name, description, Directions, serving_size) values(:name, :description, :direction, :size);

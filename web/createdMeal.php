@@ -24,20 +24,50 @@
 		<?php
 
 			$name = $_POST['name'];
-			$desc = $_POST['description'];
-			$dirc = $_POST['Directions'];
+			$description = $_POST['description'];
+			$direction = $_POST['Directions'];
 			$size = $_POST['size'];
 			$ingr = $_POST['ingred'];
 			$quan = $_POST['quantity'];
 			$meas = $_POST['measure'];
 
 			echo "name=$name\n";
-			echo "description=$desc\n";
-			echo "directions=$dirc\n";
+			echo "description=$description\n";
+			echo "directions=$direction\n";
 			echo "size=$size\n";
 			var_dump($ingr);
 			var_dump($quan);
 			var_dump($meas);
+
+			/*$statement = $db->prepare('INSERT INTO meals(name, description, Directions, serving_size) VALUES(:name, :description, :direction, :size');
+
+			$statement->bindValue(':name', $name);
+			$statement->bindValue(':description', $description);
+			$statement->bindValue(':direction' $direction);
+			$statement->bindValue(':size', $size);
+
+			$statement->execute();
+
+			$mealId = $db->lastInsertedId("meals_id_seq");*/
+
+			foreach ($ingr as $ingredient) {
+
+				$statement = $db->prepare('SELECT name, ingredients_id FROM ingredients where name = $ingredient');
+				$statement->execute();
+
+				$row = $statement->fetch(PDO::FETCH_ASSOC);
+				$ingred = $row['name'];
+				$ingID = $row['ingredients_id'];
+
+				if ($ingred == $ingredient) {
+
+					echo("The ingredient is: $ingredient and id: $ingId");
+
+				}
+			}
+			
+
+
 		?>
 	</main>
 </body>
