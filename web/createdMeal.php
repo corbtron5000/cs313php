@@ -72,7 +72,7 @@
 				if ($row) {
 					echo "it already has it<br>";
 
-					$ingredientId = $row['ingredient_id'];
+					$ingredientId = $row['ingredients_id'];
 
 					echo "the ingredient id: $ingredientId";
 
