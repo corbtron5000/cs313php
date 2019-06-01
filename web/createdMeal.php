@@ -54,16 +54,16 @@
 
 			$mealId = $db->lastInsertedId("meals_id_seq");
 
-			/*foreach ($ingr as $ingredient) {
+			foreach ($ingr as $ingredient) {
 
 				echo("<br><br>Did I get here: $ingredient<br>");
 
-				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
-				$statement->execute();
+				$statement1 = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
+				$statemen1->execute();
 
 				echo "I am here<br>";
 
-				$row = $statement->fetch(PDO::FETCH_ASSOC);
+				$row = $statement1->fetch(PDO::FETCH_ASSOC);
 
 				//
 				if ($row) {
@@ -71,14 +71,16 @@
 
 					$ingredientId = $row["$ingredient_id"];
 
-					$statement-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientId, :quantity, :measure)");
+					echo "this is ingredients id: $ingredientId";
 
-					$statement->bindValue(':mealId', $mealId);
-					$statement->bindValue(':ingredientId', $ingredientId);
-					$statement->bindValue(':quantity', $quantity);
-					$statement->bindValue(':measure', $measure);
+					$statement2-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientId, :quantity, :measure)");
 
-					$statement->execute();
+					$statement2->bindValue(':mealId', $mealId);
+					$statement2->bindValue(':ingredientId', $ingredientId);
+					$statement2->bindValue(':quantity', $quantity);
+					$statement2->bindValue(':measure', $measure);
+
+					$statement2->execute();
 
 
 				}
@@ -89,33 +91,33 @@
 					$quantity = $quan["$count"];
 
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
-					$statement = $db->prepare("INSERT INTO ingredients (name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)");
+					$statement3 = $db->prepare("INSERT INTO ingredients (name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)");
 
-					$statement->bindValue(':ingredient', $ingredient);
-					$statement->bindValue(':seasoning', $seasoning);
-					$statement->bindValue(':total' $total);
-					$statement->bindValue(':groceriesId', $groceriesId);
+					$statement3->bindValue(':ingredient', $ingredient);
+					$statement3->bindValue(':seasoning', $seasoning);
+					$statement3->bindValue(':total' $total);
+					$statement3->bindValue(':groceriesId', $groceriesId);
 
 
-					$statement->execute();
+					$statement3->execute();
 
 					$ingredientID = $db->lastInsertedId("ingredients_id_seq");
 
-					$statement-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
+					$statement4-> $db->prepare("INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUESI(:mealId, :ingredientID, :quantity, :measure)");
 
-					$statement->bindValue(':mealId', $mealId);
-					$statement->bindValue(':ingredientID', $ingredientID);
-					$statement->bindValue(':quantity', $quantity);
-					$statement->bindValue(':measure', $measure);
+					$statement4->bindValue(':mealId', $mealId);
+					$statement4->bindValue(':ingredientID', $ingredientID);
+					$statement4->bindValue(':quantity', $quantity);
+					$statement4->bindValue(':measure', $measure);
 
-					$statement->execute();
+					$statement4->execute();
 
 
 				}
 
 				$count = $count + 1;
 
-			}*/
+			}
 			
 
 
