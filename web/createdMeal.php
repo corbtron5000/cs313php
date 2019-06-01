@@ -38,6 +38,8 @@
 			var_dump($ingr);
 			var_dump($quan);
 			var_dump($meas);
+
+			//variables 
 			$count = 0;
 			$seasoning = false;
 			$total = 0;
@@ -60,13 +62,14 @@
 
 				echo("<br><br>Did I get here: $ingredient<br>");
 
-				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
-				$statement->execute();
+				$statement4 = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingredient" . "'");
+				$statement4->execute();
 
 				echo "I am here<br>";
 
-				$row = $statement->fetch(PDO::FETCH_ASSOC);
+				$row = $statement4->fetch(PDO::FETCH_ASSOC);
 
+				//this is for already displayed ingredients
 				if ($row) {
 					echo "it already has it<br>";
 
@@ -74,14 +77,14 @@
 
 					echo "the ingredient id: $ingredientId";
 
-					$statement = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientId, :quantity, :measure)');
+					$statement1 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientId, :quantity, :measure)');
 
-					$statement->bindValue(':mealId', $mealId);
-					$statement->bindValue(':ingredientId', $ingredientId);
-					$statement->bindValue(':quantity', $quantity);
-					$statement->bindValue(':measure', $measure);
+					$statement1->bindValue(':mealId', $mealId);
+					$statement1->bindValue(':ingredientId', $ingredientId);
+					$statement1->bindValue(':quantity', $quantity);
+					$statement1->bindValue(':measure', $measure);
 
-					$statement->execute();
+					$statement1->execute();
 
 
 				}
@@ -93,16 +96,16 @@
 
 					echo "this is quantity: $quantity and this is measurement: $measure<br>";
 
-					$statement = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
+					$statement2 = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingredient, :seasoning, :total, :groceriesId)');
 
-					$statement->bindValue(':ingredient', $ingredient);
-					$statement->bindValue(':seasoning', $seasoning);
-					$statement->bindValue(':total', $total);
-					$statement->bindValue(':groceriesId', $groceriesId);
+					$statement2->bindValue(':ingredient', $ingredient);
+					$statement2->bindValue(':seasoning', $seasoning);
+					$statement2->bindValue(':total', $total);
+					$statement2->bindValue(':groceriesId', $groceriesId);
 
 					echo "I go after pushing ingredient to table<br>";
 
-					$statement->execute();
+					$statement2->execute();
 
 					echo "Do I even get hear";
 
@@ -110,14 +113,14 @@
 
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
-					$statement = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
+					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
 
-					$statement->bindValue(':mealId', $mealId);
-					$statement->bindValue(':ingredientID', $ingredientID);
-					$statement->bindValue(':quantity', $quantity);
-					$statement->bindValue(':measure', $measure);
+					$statement3->bindValue(':mealId', $mealId);
+					$statement3->bindValue(':ingredientID', $ingredientID);
+					$statement3->bindValue(':quantity', $quantity);
+					$statement3->bindValue(':measure', $measure);
 
-					$statement->execute();
+					$statement3->execute();
 
 
 				}
