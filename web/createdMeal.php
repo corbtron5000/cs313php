@@ -53,7 +53,7 @@
 
 			$mealId = $db->lastInsertedId("meals_id_seq");
 
-			foreach ($ingr as $ingredient) {
+			/*foreach ($ingr as $ingredient) {
 
 				echo("<br><br>Did I get here: $ingredient<br>");
 
@@ -114,7 +114,7 @@
 
 				$count = $count + 1;
 
-			}
+			}*/
 			
 
 
