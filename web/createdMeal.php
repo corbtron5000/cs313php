@@ -89,7 +89,7 @@
 				}//does not have the ingredient'
 				else {
 
-					//require("dbConnect.php");
+					require("dbConnect.php");
 					$newDb = get_db();
 
 					$seasoning = false;
