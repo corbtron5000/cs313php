@@ -54,11 +54,11 @@
 
 				echo("Did I get here: $ingredient<br>");
 
-				/*$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients where name = $ingredient");
+				$statement = $db->prepare("SELECT name, ingredients_id FROM ingredients");
 				$statement->execute();
 
 				echo "I am here";
-				while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {	
+				/*while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {	
 
 					echo "what is in row: $row";
 
