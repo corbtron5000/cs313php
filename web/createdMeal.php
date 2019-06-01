@@ -41,9 +41,6 @@
 
 			//variables 
 			$count = 0;
-			$seasoning = false;
-			$total = 0;
-			$groceriesId = 1;
 
 			$statement = $db->prepare('INSERT INTO meals(name, description, Directions, serving_size) VALUES(:name, :description, :direction, :size)');
 
@@ -89,6 +86,12 @@
 
 				}//does not have the ingredient'
 				else {
+
+					$seasoning = false;
+					$total = 0;
+					$groceriesId = 1;
+
+					echo "groceries_id: $groceriesId, total: $total, seasoning: $seasoning<br>";
 					echo "it did not have it<br>";
 
 					$measure = $meas["$count"];
