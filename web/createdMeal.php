@@ -114,17 +114,14 @@
 
 					$statement2->execute();
 
-					echo "Do I even get hear";
-
-
-
+					echo "Do I even get hear<br>";
 
 
 					$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
 				
 					echo "this is the ingredient id after insert: $ingredientID<br>";
 
-					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurement) VALUES(:mealId, :ingredientID, :quantity, :measure)');
+					$statement3 = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurements) VALUES(:mealId, :ingredientID, :quantity, :measure)');
 
 					$statement3->bindValue(':mealId', $mealId);
 					$statement3->bindValue(':ingredientID', $ingredientID);
@@ -133,6 +130,7 @@
 
 					$statement3->execute();
 
+					echo "they end<br>"
 
 				}
 
