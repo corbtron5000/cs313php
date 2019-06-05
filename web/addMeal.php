@@ -33,9 +33,9 @@
 		<?php 
 
 			$passedId = $_GET['id'];
-			echo "This is passed id: $passedId";
+			//echo "This is passed id: $passedId";
 
-			$statement = $db->prepare("SELECT meals_id, name, serving_size, description, directions FROM meals");
+			$statement = $db->prepare("SELECT meals_id, name, serving_size, description, directions FROM meals where meal_id = $passedId");
 			$statement->execute();
 
 			echo "<div id=from>";
