@@ -29,7 +29,7 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Modify Meal</h1>
-
+		<form method="post" action="<?php echo($_SERVER['PHP_SELF']); ?>">
 		<?php 
 
 			$passedId = (int)$_GET['id'];
@@ -78,9 +78,11 @@
 				echo "</div>";
 			}
 
-			echo "<br><button id='add'>Add New Ingredient</button><button id='create'>Modify Meal</button><button id='addGrocery'>Add to Grocery List</button></div>";
+			echo "<br><button name='add'>Add New Ingredient</button><button name='create'>Modify Meal</button><button name='addGrocery'>Add to Grocery List</button></div>";
 			echo "</div>";
+
 		?>
+		</form>
 	</main>
 
 </body>
