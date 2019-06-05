@@ -29,7 +29,7 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Modify Meal</h1>
-		<form method="post" action="<?php echo($_SERVER['PHP_SELF']" . "?" . "$_SERVER['QUERY_STRING']" "); ?>">
+		<form method="post" action="<?php echo($_SERVER['PHP_SELF']" . "?" . "$_SERVER['QUERY_STRING']" . "); ?>">
 		<?php 
 
 			$passedId = (int)$_GET['id'];
@@ -43,7 +43,7 @@
 
 					$amount = $rows['ingredient_quantity'];
 
-					echo "amount: $amount"
+					echo "amount: $amount";
 				}
 			}
 
