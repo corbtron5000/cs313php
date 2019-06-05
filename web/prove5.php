@@ -34,14 +34,15 @@
 				$serving = $row['serving_size'];
 				$id = $row['meals_id'];
 				$desc = $row['description'];
+				$id = $row['meals_id'];
 
-				
-				echo "<a href=addMeal.php class=meals><div id=div>";
+
+				echo "<div id=divs><a href=addMeal.php?id=$id class=meals>";
 				echo "<h2 id=name>$name</h2>";
 				echo "<h3 id=description>Description</h3>";
 				echo "<p id=desc>$desc</p>";
 				echo "<label id=size>Serving Size: $serving</label>";
-				echo "</div></a>";
+				echo "</a></div>";
 			}
 			echo "</div>";
 		?>
