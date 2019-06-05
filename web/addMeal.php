@@ -90,7 +90,7 @@
 				echo "</div>";
 			}
 
-			echo "<br><button name='add'>Add New Ingredient</button><button name='create'>Modify Meal</button><button name='addGrocery'>Add to Grocery List</button></div>";
+			echo "<br><button type='button' id='add'>Add New Ingredient</button><button name='create'>Modify Meal</button><button name='addGrocery'>Add to Grocery List</button></div>";
 			echo "</div>";
 
 		?>
