@@ -35,6 +35,18 @@
 			$passedId = (int)$_GET['id'];
 			//echo "This is passed id: $passedId";
 
+			if (isset($_POST['addGrocery'])){
+				$state = $db->prepare("SELECT ingredient_quantity FROM mealsIngredients where meals_id = $passedId");
+				$state->execute();
+
+				while ($rows = $state->fetch(PDO::FETCH_ASSOC)) {
+
+					$amount = $rows['ingredient_quantity'];
+
+					echo "amount: $amount ";
+				}
+			}
+
 			$statement = $db->prepare("SELECT meals_id, name, serving_size, description, directions FROM meals where meals_id = $passedId");
 			$statement->execute();
 
