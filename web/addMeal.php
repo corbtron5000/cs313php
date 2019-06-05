@@ -1,7 +1,7 @@
 <?php
 	require("dbConnect.php");
 	$db = get_db();
-	$passedId = (int)$_GET['id'];
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,10 +29,10 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Modify Meal</h1>
-		<form method="post" action='<?php echo($_SERVER["PHP_SELF"?"id=$id"]); ?>'>
+		<form method="post" action="<?php echo($_SERVER['PHP_SELF']" . "?" . "$_SERVER['QUERY_STRING']" "); ?>">
 		<?php 
 
-			//$passedId = (int)$_GET['id'];
+			$passedId = (int)$_GET['id'];
 			//echo "This is passed id: $passedId";
 
 			if (isset($_POST['addGrocery'])){
@@ -43,7 +43,7 @@
 
 					$amount = $rows['ingredient_quantity'];
 
-					echo "amount: $amount ";
+					echo "amount: $amount"
 				}
 			}
 
