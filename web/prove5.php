@@ -35,6 +35,7 @@
 				$id = $row['meals_id'];
 				$desc = $row['description'];
 
+				
 				echo "<a href=addMeal.php class=meals><div id=div>";
 				echo "<h2 id=name>$name</h2>";
 				echo "<h3 id=description>Description</h3>";
