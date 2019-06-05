@@ -59,7 +59,7 @@
 				echo "<div><label>Ingredients</label><br><br>";
 			}
 
-			$statement = $db->prepare("select mi.ingredient_quantity, mi.ingredient_measurements, i.name from ingredients as i join mealsIngredients as mi on i.ingredients_id = mi.ingredients_id join meals as m on m.meals_id = mi.meals_id");
+			$statement = $db->prepare("SELECT mi.ingredient_quantity, mi.ingredient_measurements, i.name from ingredients as i join mealsIngredients as mi on i.ingredients_id = mi.ingredients_id join meals as m on m.meals_id = mi.meals_id where m.meals_id = $passedId");
 			$statement->execute();
 
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
