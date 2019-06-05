@@ -32,6 +32,9 @@
 
 		<?php 
 
+			$passedId = $_GET['id'];
+			echo "This is passed id: $passedId";
+
 			$statement = $db->prepare("SELECT meals_id, name, serving_size, description, directions FROM meals");
 			$statement->execute();
 
@@ -75,7 +78,7 @@
 				echo "</div>";
 			}
 
-			echo "<br><button id='add'>Add New Ingredient</button><button id='create'>Create Meal</button></div>";
+			echo "<br><button id='add'>Add New Ingredient</button><button id='create'>Modify Meal</button><button id='addGrocery'>Add to Grocery List</button></div>";
 			echo "</div>";
 		?>
 	</main>
