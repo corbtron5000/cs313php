@@ -29,7 +29,7 @@
 	<main>
 		<br><br><br><br><br><br><br>
 		<h1>Modify Meal</h1>
-		<form method="post" action="<?php $pass = (int)$_GET['id']; echo($_SERVER['PHP_SELF']); ?>">
+		<form method="post" action='<?php echo($_SERVER["PHP_SELF"?"id=$id"]); ?>'>
 		<?php 
 
 			//$passedId = (int)$_GET['id'];
