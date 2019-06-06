@@ -33,7 +33,26 @@
 		<?php 
 
 			$passedId = (int)$_GET['id'];
+			$ingrs = $_POST['ingred'];
 			//echo "This is passed id: $passedId";
+
+			if (isset[$_POST['create']]) {
+
+				foreach ($ingres as $ingre) {
+					
+					$modify = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingre" . "'");
+					$modify->execute();
+
+					$row = $modify->fetch(PDO::FETCH_ASSOC);
+
+					if ($row == false){
+						echo "I got here<br>";
+					}
+
+
+				}
+		 
+			}
 
 			if (isset($_POST['addGrocery'])){
 				$state = $db->prepare("SELECT ingredient_quantity, ingredients_id FROM mealsIngredients where meals_id = $passedId");
