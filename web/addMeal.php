@@ -46,7 +46,8 @@
 
 					echo "amount: $amount, id: $ingredientId";
 
-					
+					$up = $db->prepare("UPDATE ingredients SET total = total + $amount where ingredients_id = $ingredientId");
+					$up->execute();
 				}
 			}
 
