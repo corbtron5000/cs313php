@@ -40,7 +40,7 @@
 
 				echo "the modify button has been pressed<br>";
 
-				foreach ($ingres as $ingre) {
+				foreach ($ingrs as $ingre) {
 					
 					echo "this is the ingrediets for loop<br>";
 					$modify = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingre" . "'");
