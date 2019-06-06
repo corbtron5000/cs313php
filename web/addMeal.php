@@ -36,7 +36,7 @@
 			$ingrs = $_POST['ingred'];
 			//echo "This is passed id: $passedId";
 
-			if (isset[$_POST['create']]) {
+			if (isset($_POST['create'])) {
 
 				foreach ($ingres as $ingre) {
 					
