@@ -42,7 +42,7 @@
 				while ($rows = $state->fetch(PDO::FETCH_ASSOC)) {
 
 					$amount = $rows['ingredient_quantity'];
-					//$ingredientId = $rows['ingredients_id'];
+					$ingredientId = $rows['ingredients_id'];
 
 					echo "amount: $amount, id: $ingredientsId";
 				}
