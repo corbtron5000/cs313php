@@ -36,13 +36,13 @@
 			//echo "This is passed id: $passedId";
 
 			if (isset($_POST['addGrocery'])){
-				$state = $db->prepare("SELECT ingredient_quantity, ingredients_id) FROM mealsIngredients where meals_id = $passedId");
+				$state = $db->prepare("SELECT ingredient_quantity, ingredients_id FROM mealsIngredients where meals_id = $passedId");
 				$state->execute();
 
 				while ($rows = $state->fetch(PDO::FETCH_ASSOC)) {
 
 					$amount = $rows['ingredient_quantity'];
-					$ingredientId = $rows['ingredients_id'];
+					//$ingredientId = $rows['ingredients_id'];
 
 					echo "amount: $amount, id: $ingredientsId";
 				}
