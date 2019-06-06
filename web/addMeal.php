@@ -45,6 +45,8 @@
 					$ingredientId = $rows['ingredients_id'];
 
 					echo "amount: $amount, id: $ingredientId";
+
+					
 				}
 			}
 
