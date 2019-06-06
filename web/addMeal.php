@@ -44,7 +44,7 @@
 					$amount = $rows['ingredient_quantity'];
 					$ingredientId = $rows['ingredients_id'];
 
-					echo "amount: $amount, id: $ingredientsId";
+					echo "amount: $amount, id: $ingredientId";
 				}
 			}
 
