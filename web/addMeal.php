@@ -76,7 +76,7 @@
 						$mti->bindValue(':quantity', $quantity);
 						$mti->bindValue(':measure', $measure);
 
-						$statement3->execute();
+						$mti->execute();
 
 					}
 
