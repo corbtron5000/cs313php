@@ -38,6 +38,8 @@
 			$groceriesId = 1;
 			$passedId = (int)$_GET['id'];
 			$ingrs = $_POST['ingred'];
+			$quan = $_POST['quantity'];
+			$meas = $_POST['measure'];
 			//echo "This is passed id: $passedId";
 
 			if (isset($_POST['create'])) {
