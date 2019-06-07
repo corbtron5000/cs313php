@@ -32,6 +32,10 @@
 		<form method="post" action="<?php echo($_SERVER['REQUEST_URI']); ?>">
 		<?php 
 
+			$count = 0;
+			$total = 0.0;
+			$seasoning = 'f';
+			$groceriesId = 1;
 			$passedId = (int)$_GET['id'];
 			$ingrs = $_POST['ingred'];
 			//echo "This is passed id: $passedId";
@@ -50,8 +54,31 @@
 
 					if ($row == false){
 						echo "I got here<br>";
+						$measure = $meas["$count"];
+						$quantity = $quan["$count"];
+
+						$addIngred = $db->prepare('INSERT INTO ingredients(name, seasoning, total, groceries_id) VALUES(:ingre, :seasoning, :total, :groceriesId)');
+						$addIngred->bindValue(':ingre', $ingre);
+						$addIngred->bindValue(':seasoning', $seasoning);
+						$addIngred->bindValue(':total', $total);
+						$addIngred->bindValue(':groceriesId', $groceriesId);
+
+						$addIngred->execute();
+
+						$ingredientID = $db->lastInsertId("ingredients_ingredients_id_seq");
+
+						$mti = $db->prepare('INSERT INTO mealsIngredients(meals_id, ingredients_id,ingredient_quantity, ingredient_measurements) VALUES(:passedId, :ingredientID, :quantity, :measure)');
+
+						$mti->bindValue(':passedId', $passedId);
+						$mti->bindValue(':ingredientID', $ingredientID);
+						$mti->bindValue(':quantity', $quantity);
+						$mti->bindValue(':measure', $measure);
+
+						$statement3->execute();
+
 					}
 
+					$count = $count + 1;
 
 				}
 		 
