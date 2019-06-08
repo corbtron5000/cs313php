@@ -41,7 +41,7 @@
 				echo "<h2 id='name'>$name</h2>";
 				echo "<h3 id='description'>Description</h3>";
 				echo "<p id='desc'>$desc</p>";
-				echo "<label id='size'>Serving Size: $serving</label>";
+				echo "<p id='size'>Serving Size: $serving</p>";
 				echo "</div>";
 			}
 			echo "</div>";
