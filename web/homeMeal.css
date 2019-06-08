@@ -37,11 +37,15 @@ a.link:hover {
   text-align: center;
 }
 
+#parent {
+
+display: inline-block;
+}
+
 #mealDiv {
   background-color: #fafafa;
   width: 400px;
   height: 350px;
-  display: inline-block;
 }
 
 #size {
