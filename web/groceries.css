@@ -43,6 +43,10 @@ a:hover {
   margin-right: auto;
 }
 
+table {
+  border: none;
+  border-collapse: collapse;
+}
 th {
   background-color: #F0F0F0;
   font-size: 30px;
@@ -52,4 +56,6 @@ th {
 
 td {
   font-size: 20px;
+  border: none;
+  border-collapse: collapse;
 }
