@@ -45,9 +45,10 @@ a:hover {
 
 th {
   background-color: #F0F0F0;
-  font-size: 24px;
+  font-size: 30px;
+  border: none;
 }
 
 tr {
-  font-size: 16px;
+  font-size: 20px;
 }
