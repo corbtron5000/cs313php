@@ -37,12 +37,15 @@ a.link:hover {
   text-align: center;
 }
 
-#div {
+#mealDiv {
   background-color: #fafafa;
   width: 250;
   height: 250;
   display: inline-block;
-  margin: 5px 5px 5px 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 #size {
