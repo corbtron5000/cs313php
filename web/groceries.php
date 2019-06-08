@@ -20,7 +20,7 @@
 	</header>
 	<main>
 		<br><br><br><br><br><br><br>
-		<h1>Your Groceries List</h1>
+		<h1>Your Grocery List</h1>
 
 		<form method="post" action="<?php echo($_SERVER['PHP_SELF']); ?>">
 			<div id="table">
