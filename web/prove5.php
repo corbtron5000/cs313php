@@ -37,12 +37,12 @@
 				$id = $row['meals_id'];
 
 
-				echo "<div id=mealDiv><a href=addMeal.php?id=$id class=meals>";
+				echo "<div id=mealDiv>";
 				echo "<h2 id=name>$name</h2>";
 				echo "<h3 id=description>Description</h3>";
 				echo "<p id=desc>$desc</p>";
 				echo "<label id=size>Serving Size: $serving</label>";
-				echo "</a></div>";
+				echo "</div>";
 			}
 			echo "</div>";
 		?>
