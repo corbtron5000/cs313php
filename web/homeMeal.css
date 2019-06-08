@@ -44,6 +44,7 @@ display: inline-block;
 
 #mealDiv {
   background-color: #fafafa;
+  display: inline-block;
   width: 400px;
   height: 350px;
 }
