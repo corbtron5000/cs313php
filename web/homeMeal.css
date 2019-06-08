@@ -41,10 +41,6 @@ a.link:hover {
   background-color: #fafafa;
   width: 250px;
   display: inline-block;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
 }
 
 #size {
