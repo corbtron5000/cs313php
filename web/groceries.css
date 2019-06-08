@@ -52,6 +52,7 @@ th {
   font-size: 30px;
   border: none;
   border-collapse: collapse;
+  padding: 10px;
 }
 
 td {
