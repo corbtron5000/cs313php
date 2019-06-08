@@ -45,6 +45,7 @@ a.link:hover {
   height: 250px;
   margin-left: 25px;
   margin-bottom: 25px;
+  padding: 10px;
 }
 
 #size {
