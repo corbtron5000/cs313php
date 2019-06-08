@@ -43,6 +43,7 @@ a.link:hover {
   float: left;
   width: 400px;
   height: 250px;
+  margin-left: 10px;
 }
 
 #size {
