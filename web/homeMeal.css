@@ -64,7 +64,8 @@ a.meals {
   text-decoration: none;
   color: black;
 }
-a.meals:hover {
+
+#mealDiv:hover {
   background-color: #F0F0F0;
 
 }
