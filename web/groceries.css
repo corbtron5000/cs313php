@@ -47,8 +47,9 @@ th {
   background-color: #F0F0F0;
   font-size: 30px;
   border: none;
+  border-collapse: collapse;
 }
 
-tr {
+td {
   font-size: 20px;
 }
