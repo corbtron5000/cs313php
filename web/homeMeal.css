@@ -39,10 +39,9 @@ a.link:hover {
 
 #mealDiv {
   background-color: #fafafa;
-  width: 350px;
-  height: 200px;
+  width: 400px;
+  height: 350px;
   display: inline-block;
-  padding: 10px 10px 10px 10px;
 }
 
 #size {
