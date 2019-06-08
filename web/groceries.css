@@ -39,7 +39,10 @@ a:hover {
 
 #table {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-table {
-  text-align: center;
+
+tr {
+  background-color: #F0F0F0;
 }
