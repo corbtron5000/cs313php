@@ -16,6 +16,7 @@
 			<li><a href="prove5.php" class="link">Home</a></li>
 			<li><a href="meal.php" class="link">Add Meal</a></li>
 			<li><a href="groceries.php" class="link">Grocery List</a></li>
+			<li><a href="assignments.html" class="link"></a></li>
 		</ul>
 	</header>
 	<main>

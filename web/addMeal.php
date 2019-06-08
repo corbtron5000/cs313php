@@ -24,6 +24,7 @@
 			<li><a href="prove5.php" class="link">Home</a></li>
 			<li><a href="meal.php" class="link">Add Meal</a></li>
 			<li><a href="groceries.php" class="link">Grocery List</a></li>
+			<li><a href="assignments.html" class="link"></a></li>
 		</ul>
 	</header>
 	<main>
@@ -44,18 +45,18 @@
 
 			if (isset($_POST['create'])) {
 
-				echo "the modify button has been pressed<br>";
+				//echo "the modify button has been pressed<br>";
 
 				foreach ($ingrs as $ingre) {
 					
-					echo "this is the ingrediets for loop<br>";
+					//echo "this is the ingrediets for loop<br>";
 					$modify = $db->prepare("SELECT name, ingredients_id FROM ingredients where name =" . "'" ."$ingre" . "'");
 					$modify->execute();
 
 					$row = $modify->fetch(PDO::FETCH_ASSOC);
 
 					if ($row == false){
-						echo "I got here<br>";
+						//echo "I got here<br>";
 						$measure = $meas["$count"];
 						$quantity = $quan["$count"];
 
@@ -95,7 +96,7 @@
 					$amount = $rows['ingredient_quantity'];
 					$ingredientId = $rows['ingredients_id'];
 
-					echo "amount: $amount, id: $ingredientId";
+					//echo "amount: $amount, id: $ingredientId";
 
 					$up = $db->prepare("UPDATE ingredients SET total = total + $amount where ingredients_id = $ingredientId");
 					$up->execute();
